@@ -6,10 +6,12 @@ import jackdaw._JackdawAspects;
  * 
  * @return {$jp} the current root node of the AST
  */
+ /*
 JoinPoints.prototype.root = function() {
 	var rootOutput = call GetRoot();
 	return rootOutput.rootJp;
 }
+*/
 
 /**
  * 
