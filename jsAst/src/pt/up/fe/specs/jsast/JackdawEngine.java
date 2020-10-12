@@ -11,8 +11,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 import com.google.gson.JsonArray;
@@ -21,23 +19,21 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import ast.JsAstResources;
+import pt.up.fe.specs.jsengine.JsEngine;
+import pt.up.fe.specs.jsengine.graal.GraalvmJsEngine;
 import pt.up.fe.specs.util.lazy.Lazy;
 
 public class JackdawEngine {
 
-    private static final Lazy<ScriptEngine> ESPRIMA_PARSER = Lazy.newInstance(JackdawEngine::initEsprima);
+    private static final Lazy<JsEngine> ESPRIMA_PARSER = Lazy.newInstance(JackdawEngine::initEsprima);
 
-    private static ScriptEngine initEsprima() {
-        ScriptEngine javascriptEngine = new ScriptEngineManager().getEngineByName("nashorn");
+    private static JsEngine initEsprima() {
+        JsEngine jsEngine = new GraalvmJsEngine();
 
-        try {
-            javascriptEngine.eval(JsAstResources.ESPRIMA.read());
-            javascriptEngine.eval(JsAstResources.ESCODEGEN.read());
+        jsEngine.eval(JsAstResources.ESPRIMA.read());
+        jsEngine.eval(JsAstResources.ESCODEGEN.read());
 
-        } catch (ScriptException e) {
-            throw new RuntimeException("Could not load Esprima parser", e);
-        }
-        return javascriptEngine;
+        return jsEngine;
     }
 
     public static JsonObject parseSourceCode(Path folderPath) throws IOException, ScriptException {
@@ -47,7 +43,7 @@ public class JackdawEngine {
 
         // Recursively walk all javascript files in the desired folder.
         List<File> sourceFiles = new ArrayList<>();
-        ArrayList<JsonObject> sourceFilesJSON = new ArrayList<>();
+        // ArrayList<JsonObject> sourceFilesJSON = new ArrayList<>();
         Files.walk(folderPath).filter(path -> !Files.isDirectory(path)).forEach(path -> sourceFiles.add(path.toFile()));
 
         // Root of the AST tree of several files.
@@ -73,7 +69,7 @@ public class JackdawEngine {
 
         // Recursively walk all javascript files in the desired folder.
         List<File> sourceFiles = new ArrayList<File>();
-        List<JsonObject> sourceFilesJSON = new ArrayList<JsonObject>();
+        // List<JsonObject> sourceFilesJSON = new ArrayList<JsonObject>();
         Files.walk(folderPath).filter(path -> !Files.isDirectory(path)).forEach(path -> sourceFiles.add(path.toFile()));
 
         JsonArray programs = new JsonArray();
@@ -92,13 +88,15 @@ public class JackdawEngine {
             throws IOException, ScriptException {
         String text = new String(Files.readAllBytes(file.toPath()));
 
-        ScriptEngine javascriptEngine = ESPRIMA_PARSER.get();
+        var javascriptEngine = ESPRIMA_PARSER.get();
 
         javascriptEngine.put("code", text);
         javascriptEngine.put("esprimaPath", esprimaAbsolutePath.toString());
 
-        javascriptEngine.eval(JsAstResources.PARSE_JAVASCRIPT.read());
-        String stringAst = (String) javascriptEngine.get("string");
+        var result = javascriptEngine.eval(JsAstResources.PARSE_JAVASCRIPT.read());
+        // System.out.println("RESULT: " + result);
+        String stringAst = javascriptEngine.convert(result, String.class);
+        // String stringAst = (String) javascriptEngine.get("string");
         JsonElement jsonTree = parser.parse(stringAst);
         JsonObject program = jsonTree.getAsJsonObject();
         program.addProperty("path", file.getAbsolutePath());
@@ -121,10 +119,11 @@ public class JackdawEngine {
 
     public static JsonArray parseInsertedCode(String text) throws ScriptException {
         JsonParser parser = new JsonParser();
-        ScriptEngine javascriptEngine = ESPRIMA_PARSER.get();
+        var javascriptEngine = ESPRIMA_PARSER.get();
         javascriptEngine.put("code", text);
-        javascriptEngine.eval(JsAstResources.PARSE_JAVASCRIPT.read());
-        String stringAst = (String) javascriptEngine.get("string");
+        var result = javascriptEngine.eval(JsAstResources.PARSE_JAVASCRIPT.read());
+        String stringAst = javascriptEngine.convert(result, String.class);
+        // String stringAst = (String) javascriptEngine.get("string");
         JsonElement jsonTree = parser.parse(stringAst);
         JsonObject program = jsonTree.getAsJsonObject();
         JsonArray statements = program.get("body").getAsJsonArray();
@@ -133,15 +132,16 @@ public class JackdawEngine {
 
     public static void exportPrograms(JsonArray programs, File outputDir, String escodegenOptions)
             throws ScriptException {
-        // JsonParser parser = new JsonParser();
-        ScriptEngine javascriptEngine = ESPRIMA_PARSER.get();
+
+        var javascriptEngine = ESPRIMA_PARSER.get();
         for (JsonElement program : programs) {
             JsonObject programObject = program.getAsJsonObject();
             String programString = programObject.toString();
             javascriptEngine.put("AST_STRING", programString);
             javascriptEngine.put("OPTIONS", escodegenOptions);
-            javascriptEngine.eval(JsAstResources.GENERATE_JAVASCRIPT.read());
-            String generatedText = (String) javascriptEngine.get("GENERATED_JS");
+            var result = javascriptEngine.eval(JsAstResources.GENERATE_JAVASCRIPT.read());
+            String generatedText = javascriptEngine.convert(result, String.class);
+            // String generatedText = (String) javascriptEngine.get("GENERATED_JS");
 
             String path = programObject.get("path").getAsString();
             File file = new File(path);
@@ -159,14 +159,13 @@ public class JackdawEngine {
     }
 
     public static String codeFromJSON(JsonObject node) throws ScriptException {
-        JsonParser parser = new JsonParser();
-        // ScriptEngine javascriptEngine = JackdawEngineUtilities.createJavascriptEngine();
-        ScriptEngine javascriptEngine = ESPRIMA_PARSER.get();
+        var javascriptEngine = ESPRIMA_PARSER.get();
         String programString = node.toString();
         javascriptEngine.put("AST_STRING", programString);
         javascriptEngine.put("OPTIONS", "{}");
-        javascriptEngine.eval(JsAstResources.GENERATE_JAVASCRIPT.read());
-        String generatedText = (String) javascriptEngine.get("GENERATED_JS");
+        var result = javascriptEngine.eval(JsAstResources.GENERATE_JAVASCRIPT.read());
+        String generatedText = javascriptEngine.convert(result, String.class);
+        // String generatedText = (String) javascriptEngine.get("GENERATED_JS");
         return generatedText;
     }
 
