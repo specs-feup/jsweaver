@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 import javax.script.ScriptException;
 
 import org.lara.interpreter.joptions.config.interpreter.LaraiKeys;
+import org.lara.interpreter.weaver.ast.AstMethods;
 import org.lara.interpreter.weaver.interf.AGear;
 import org.lara.interpreter.weaver.interf.JoinPoint;
 import org.lara.interpreter.weaver.options.WeaverOption;
@@ -26,6 +27,7 @@ import pt.up.fe.specs.jackdaw.api.JackdawLaraApi;
 import pt.up.fe.specs.jackdaw.api.JackdawObfuscationApi;
 import pt.up.fe.specs.jackdaw.api.JackdawWeaverApi;
 import pt.up.fe.specs.jackdaw.api.LaraCoreApi;
+import pt.up.fe.specs.jackdaw.utils.JackdawAstMethods;
 import pt.up.fe.specs.jsast.JackdawEngine;
 import pt.up.fe.specs.util.SpecsIo;
 import pt.up.fe.specs.util.lazy.Lazy;
@@ -221,6 +223,16 @@ public class JackdawWeaver extends AJsWeaver {
     @Override
     public JoinPoint getRootJp() {
         return select();
+    }
+    
+    @Override
+    public Object getRootNode() {
+        return select().getNode();
+    }
+    
+    @Override
+    public AstMethods getAstMethods() {
+        return new JackdawAstMethods(this);
     }
 
 }

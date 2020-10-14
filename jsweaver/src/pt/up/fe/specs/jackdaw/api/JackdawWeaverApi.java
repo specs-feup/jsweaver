@@ -3,7 +3,10 @@ package pt.up.fe.specs.jackdaw.api;
 import org.lara.interpreter.weaver.utils.LaraResourceProvider;
 
 public enum JackdawWeaverApi implements LaraResourceProvider {
-
+	
+	JACKDAW_CLASS_JP("jp/JackdawClassJp.lara"),
+    JACKDAW_JOIN_POINT("jp/JackdawJoinPoint.lara"),
+    JACKDAW_JOIN_POINTS("jp/JackdawJoinPoints.lara"),
 	JOINPOINTS("JoinPoints.lara");
 
 	private final String resource;
