@@ -1,6 +1,5 @@
 import weaver.jp.ClassJp;
 import weaver.Weaver;
-import weaver.jp.CommonJoinPoints;
 import weaver.Query;
 
 _lara_dummy_ = Object.defineProperty(ClassJp.prototype, 'name', {
@@ -10,9 +9,12 @@ _lara_dummy_ = Object.defineProperty(ClassJp.prototype, 'name', {
 });
 
 _lara_dummy_ = Object.defineProperty(ClassJp.prototype, 'superClasses', {
-	get: function () { 
-		var superClassName = JSON.parse(this.astNode).superClass.name;
-		//return Query.search("class",superClassName).first();
-		return superClassName;
+	get: function () {
+		var superClass = JSON.parse(this.astNode).superClass;
+		if(superClass===null)
+			return [];
+		var superClassName = superClass.name;
+		var $classSuper = Query.search("class",superClassName).first();
+		return $classSuper === undefined ? [] : [$classSuper];
 	}
 });

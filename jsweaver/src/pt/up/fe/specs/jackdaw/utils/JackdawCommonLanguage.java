@@ -31,7 +31,7 @@ public class JackdawCommonLanguage {
 		JOINPOINT_MAPPER.put("ExpressionStatement", "ExprJp");
 		JOINPOINT_MAPPER.put("FunctionDeclaration", "FunctionJp");
 		JOINPOINT_MAPPER.put("VariableDeclaration", "DeclJp");
-        JOINPOINT_MAPPER.put("ClassDeclaration", "ClassJp");
+		JOINPOINT_MAPPER.put("ClassDeclaration", "ClassJp");
 		JOINPOINT_MAPPER.put("Program", "FileJp");
 		JOINPOINT_MAPPER.put("Project", "ProgramJp");
 		// JOINPOINT_MAPPER.put("Joinpoint", "JoinPoint");

@@ -51,9 +51,7 @@ public class JackdawAstMethods extends AAstMethods<JsonObject> {
 
 	@Override
 	protected Object[] getChildrenImpl(JsonObject node) {
-		return Arrays.stream(JackdawQueryEngine.getChildren(node))
-				.map(jp->jp.getNode())
-				.toArray();
+		return Arrays.stream(JackdawQueryEngine.getChildren(node)).map(jp -> jp.getNode()).toArray();
 	}
 
 	@Override

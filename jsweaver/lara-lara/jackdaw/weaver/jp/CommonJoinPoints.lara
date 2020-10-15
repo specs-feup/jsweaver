@@ -1,7 +1,9 @@
+// Patches weaver.JoinPoint and other classes
+import weaver.jp.JoinPointsCommonPath;
+
 // Enable Jackdaw version of common join points
 import weaver.jp.JackdawJoinPoint;
 import weaver.jp.JackdawClassJp;
 
-// Patches weaver.JoinPoint and other classes
-import weaver.jp.JoinPointsCommonPath;
+
 
