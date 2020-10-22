@@ -27,6 +27,7 @@ import com.google.gson.JsonObject;
 
 import pt.up.fe.specs.jackdaw.JackdawQueryEngine;
 import pt.up.fe.specs.jackdaw.JoinpointCreator;
+import pt.up.fe.specs.jackdaw.ParentMapper;
 
 public class JackdawAstMethods extends AAstMethods<JsonObject> {
 
@@ -58,6 +59,11 @@ public class JackdawAstMethods extends AAstMethods<JsonObject> {
 	protected Object[] getScopeChildrenImpl(JsonObject node) {
 		// TODO Auto-generated method stub
 		return new Object[0];
+	}
+
+	@Override
+	protected Object getParentImpl(JsonObject node) {
+		return ParentMapper.getParent(node);
 	}
 
 }
