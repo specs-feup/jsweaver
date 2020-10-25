@@ -1,0 +1,35 @@
+import weaver.jp.MethodJp;
+import weaver.Weaver;
+
+
+
+_lara_dummy_ = Object.defineProperty(MethodJp.prototype, 'class', {
+	get: function () {
+		var classBody = this.parent;
+		ClassDeclaration = classBody.parent;
+		return this.parent.parent;		
+	}
+});
+
+
+_lara_dummy_ = Object.defineProperty(MethodJp.prototype, 'name', {
+	get: function () {
+		var methodKey = this.astNode.get("key"); 
+		return methodKey.get("name").getAsString(); 
+	}
+});
+
+_lara_dummy_ = Object.defineProperty(MethodJp.prototype, 'signature', {
+	get: function () {
+		var paramsList = this.params.map(param => param.name).join(",");   
+		return "function " + this.class.name + "::" + this.name + "(" + paramsList +")"; 
+	}
+});
+
+_lara_dummy_ = Object.defineProperty(MethodJp.prototype, 'params', {
+	get: function () {
+		var methodValue = this.astNode.get("value");
+		var params = methodValue.get("params");  
+		return CommonJoinPoints.toJoinPoints(Weaver.toJs(params));
+	}
+});

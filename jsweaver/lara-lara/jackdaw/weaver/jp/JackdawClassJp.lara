@@ -2,19 +2,55 @@ import weaver.jp.ClassJp;
 import weaver.Weaver;
 import weaver.Query;
 
-_lara_dummy_ = Object.defineProperty(ClassJp.prototype, 'name', {
+_lara_dummy_ = Object.defineProperty(ClassJp.prototype, 'id', {
 	get: function () { 
-		return JSON.parse(this.astNode).id.name; 
+		return this.name; 
+	}
+});
+
+_lara_dummy_ = Object.defineProperty(ClassJp.prototype, 'name', {
+	get: function () {
+		var classIdentifier = this.astNode.get("id"); 
+		return classIdentifier.get("name").getAsString(); 
 	}
 });
 
 _lara_dummy_ = Object.defineProperty(ClassJp.prototype, 'superClasses', {
 	get: function () {
-		var superClass = JSON.parse(this.astNode).superClass;
-		if(superClass===null)
+		var superClass = this.astNode.get("superClass");
+		if(superClass.isJsonNull())
 			return [];
-		var superClassName = superClass.name;
+		var superClassName = superClass.get("name").getAsString();
 		var $classSuper = Query.search("class",superClassName).first();
 		return $classSuper === undefined ? [] : [$classSuper];
 	}
 });
+
+
+_lara_dummy_ = Object.defineProperty(ClassJp.prototype, 'allSuperClasses', {
+	get: function () {
+		var allSuperClasses = [];
+
+		for(superClass of this.superClasses){
+			allSuperClasses.push(superClass);
+			allSuperClasses = allSuperClasses.concat(superClass.allSuperClasses);
+		}
+			 
+		return allSuperClasses;
+	}
+});
+
+_lara_dummy_ = Object.defineProperty(ClassJp.prototype, 'methods', {
+	get: function () {
+		var classBody = this.astNode.get("body");
+		var methods = classBody.get("body");	
+		return CommonJoinPoints.toJoinPoints(Weaver.toJs(methods));
+	}
+});
+
+_lara_dummy_ = Object.defineProperty(ClassJp.prototype, 'kind', {
+	get: function () { 	
+		return "class";
+	}
+});
+

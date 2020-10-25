@@ -4,6 +4,15 @@ import weaver.jp.JoinPointsCommonPath;
 // Enable Jackdaw version of common join points
 import weaver.jp.JackdawJoinPoint;
 import weaver.jp.JackdawClassJp;
-
+import weaver.jp.JackdawMethodJp;
+import weaver.jp.JackdawFunctionJp;
+//import weaver.jp.JackdawCallJp;
+//import weaver.jp.JackdawMemberCallJp;
+////import weaver.jp.JackdawFieldJp;
+//import weaver.jp.JackdawFieldRefJp;
+////import weaver.jp.JackdawTypeJp;
+//import weaver.jp.JackdawVarDeclJp;
+//import weaver.jp.JackdawVarRefJp;
+import weaver.jp.JackdawParamJp;
 
 
