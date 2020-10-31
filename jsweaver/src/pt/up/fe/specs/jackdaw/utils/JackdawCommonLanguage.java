@@ -24,15 +24,22 @@ import java.util.function.Function;
 import com.google.gson.JsonObject;
 
 import pt.up.fe.specs.jackdaw.ParentMapper;
-import pt.up.fe.specs.jackdaw.abstracts.AJackdawWeaverJoinPoint;
 
 public class JackdawCommonLanguage {
 
 	private static final Map<String, Function<JsonObject, String>> JOINPOINT_MAPPER;
 	static {
-		JOINPOINT_MAPPER = new HashMap<>();
-
-		JOINPOINT_MAPPER.put("MethodDefinition", node -> "MethodJp");
+		JOINPOINT_MAPPER = new HashMap<>();		
+		//JOINPOINT_MAPPER.put("WhileStatement", node -> "LoopJp");
+		//JOINPOINT_MAPPER.put("ForOfStatement", node -> "LoopJp");
+		//JOINPOINT_MAPPER.put("ForInStatement", node -> "LoopJp");
+		//JOINPOINT_MAPPER.put("ForStatement", node -> "LoopJp");
+		//JOINPOINT_MAPPER.put("DoWhileStatement", node -> "LoopJp");		
+		JOINPOINT_MAPPER.put("SwitchCase", node -> "CaseJp");
+		JOINPOINT_MAPPER.put("SwitchStatement", node -> "SwitchJp");
+		JOINPOINT_MAPPER.put("IfStatement", node -> "IfJp");
+		JOINPOINT_MAPPER.put("NewExpression", node -> "ConstructorCallJp");		
+		JOINPOINT_MAPPER.put("MethodDefinition", JackdawCommonLanguage::methodDefinition);		
 		JOINPOINT_MAPPER.put("Identifier", JackdawCommonLanguage::identifier);
 		JOINPOINT_MAPPER.put("VariableDeclaration", node -> "VarDeclJp");
 		JOINPOINT_MAPPER.put("MemberExpression", JackdawCommonLanguage::memberExpression);
@@ -47,8 +54,10 @@ public class JackdawCommonLanguage {
 		// - Field (?)
 		// - Type
 		// - Decl
+		// - Stmt
 
 		// TODO: Param can also be a AssignmentPattern | BindingPattern;
+		// TODO: ExpressionStatement is a expr or stmt?
 
 	}
 
@@ -86,6 +95,14 @@ public class JackdawCommonLanguage {
 			return "MemberCallJp";
 
 		return "FieldRefJp";
+	}
+	
+	private static String methodDefinition(JsonObject node) {
+		
+		if(node.get("kind").getAsString().equals("method"))
+			return "MethodJp";
+		else
+			return "ConstructorJp";
 	}
 
 //	@SuppressWarnings("unused")
