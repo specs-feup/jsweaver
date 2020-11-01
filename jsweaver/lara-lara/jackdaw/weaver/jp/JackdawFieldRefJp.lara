@@ -1,0 +1,23 @@
+import weaver.jp.FieldRefJp;
+import weaver.Weaver;
+
+_lara_dummy_ = Object.defineProperty(FieldRefJp.prototype, 'name', {
+	get: function () { 
+		return this.astNode.get("property").get("name").getAsString();
+	}
+});
+
+/*
+_lara_dummy_ = Object.defineProperty(FieldRefJp.prototype, 'class', {
+	get: function () {
+		
+	}
+});
+
+
+_lara_dummy_ = Object.defineProperty(FieldRefJp.prototype, 'field', {
+	get: function () {
+		
+	}
+});
+*/

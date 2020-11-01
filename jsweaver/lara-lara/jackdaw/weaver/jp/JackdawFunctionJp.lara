@@ -27,3 +27,20 @@ _lara_dummy_ = Object.defineProperty(FunctionJp.prototype, 'params', {
 		return CommonJoinPoints.toJoinPoints(Weaver.toJs(params));
 	}
 });
+
+_lara_dummy_ = Object.defineProperty(FunctionJp.prototype, 'hasBody', {
+	get: function () {  	
+		return true; 
+	}
+});
+
+_lara_dummy_ = Object.defineProperty(FunctionJp.prototype, 'stmts', {
+	get: function () {
+		if(this.hasBody){
+			var functionBody = this.astNode.get("body");
+			var functionStmts = functionBody.get("body");
+			return CommonJoinPoints.toJoinPoints(Weaver.toJs(functionStmts));
+		}
+		return []; 
+	}
+});

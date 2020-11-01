@@ -1,0 +1,26 @@
+import weaver.jp.LoopJp;
+import weaver.Weaver;
+
+_lara_dummy_ = Object.defineProperty(LoopJp.prototype, '_type', {
+	get: function () {
+		return this.astNode.get("type").getAsString();
+	}
+});
+
+// TODO: this should be implement in common jps: DoWhileStatement, ForStatement, ForInStatement, ForOfStatement, WhileStatement
+_lara_dummy_ = Object.defineProperty(LoopJp.prototype, 'condition', {
+	get: function () {
+		if(this.hasCondition)
+			return CommonJoinPoints.toJoinPoint(this.astNode.get("test"));
+	
+		return null;
+	}
+});
+
+_lara_dummy_ = Object.defineProperty(LoopJp.prototype, 'hasCondition', {
+	get: function () {	
+		var loopsWithCondition = ["DoWhileStatement", "ForStatement", "WhileStatement"];
+		return loopsWithCondition.contains(this._type) && !this.astNode.get("test").isJsonNull();
+	}
+});
+

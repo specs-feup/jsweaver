@@ -1,0 +1,12 @@
+import weaver.jp.ConstructorJp;
+import weaver.Weaver;
+
+_lara_dummy_ = Object.defineProperty(ConstructorJp.prototype, 'name', {
+	get: function () {
+		var parent = this.parent;
+		while(parent.joinPointType != "class")
+			  parent = parent.parent;
+			  
+		return parent.name;
+	}
+});

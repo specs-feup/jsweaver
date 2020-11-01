@@ -42,13 +42,34 @@ _lara_dummy_ = Object.defineProperty(ClassJp.prototype, 'allSuperClasses', {
 
 _lara_dummy_ = Object.defineProperty(ClassJp.prototype, 'methods', {
 	get: function () {
+		return this.allMethods.filter(met=>met.joinPointType==="method");
+	}
+});
+
+_lara_dummy_ = Object.defineProperty(ClassJp.prototype, 'constructors', {
+	get: function () { 	
+		return this.allMethods.filter(met=>met.joinPointType==="constructor");
+	}
+});
+
+_lara_dummy_ = Object.defineProperty(ClassJp.prototype, 'allMethods', {
+	get: function () { 	
 		var classBody = this.astNode.get("body");
 		var methods = classBody.get("body");	
 		return CommonJoinPoints.toJoinPoints(Weaver.toJs(methods));
 	}
 });
 
-_lara_dummy_ = Object.defineProperty(ClassJp.prototype, 'kind', {
+/*
+_lara_dummy_ = Object.defineProperty(ClassJp.prototype, 'fields', {
+	get: function () {
+		//TODO
+		//Idea: Get all fieldRef then get field from identifier 
+	}
+});
+*/
+
+_lara_dummy_ = Object.defineProperty(ClassJp.prototype, '_kind', {
 	get: function () { 	
 		return "class";
 	}

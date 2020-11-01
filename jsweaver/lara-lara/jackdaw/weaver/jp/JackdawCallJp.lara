@@ -1,0 +1,14 @@
+import weaver.jp.CallJp;
+import weaver.Weaver;
+
+_lara_dummy_ = Object.defineProperty(CallJp.prototype, 'name', {
+	get: function () {  
+		return this.astNode.get("callee").get("name").getAsString(); 
+	}
+});
+
+_lara_dummy_ = Object.defineProperty(CallJp.prototype, 'function', {
+	get: function () {
+		return Query.search("function",this.name).first();
+	}
+});

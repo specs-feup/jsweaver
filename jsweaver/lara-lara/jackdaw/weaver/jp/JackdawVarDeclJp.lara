@@ -1,0 +1,8 @@
+import weaver.jp.VarDeclJp;
+import weaver.Weaver;
+
+_lara_dummy_ = Object.defineProperty(VarDeclJp.prototype, 'name', {
+	get: function () { 
+		return this.astNode.get("id").get("name").getAsString(); 
+	}
+});

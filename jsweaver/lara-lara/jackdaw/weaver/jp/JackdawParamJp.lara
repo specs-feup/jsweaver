@@ -1,15 +1,18 @@
 import weaver.jp.ParamJp;
 import weaver.Weaver;
 
-/*
+
 _lara_dummy_ = Object.defineProperty(ParamJp.prototype, 'function', {
 	get: function () { 
-		return CommonJoinPoints.toJoinPoint(this.astNode.getFunctionDecl()); 
+		var parent = this.parent;
+		while(parent.instanceOf("class"))
+			  parent = parent.parent;
+			  
+		return parent.name; 
 	}
 });
-*/
 
-// TODO: check if it is necessary to override
+
 _lara_dummy_ = Object.defineProperty(ParamJp.prototype, 'name', {
 	get: function () { 
 		return this.astNode.get("name").getAsString(); 

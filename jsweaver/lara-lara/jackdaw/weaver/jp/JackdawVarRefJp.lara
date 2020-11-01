@@ -1,0 +1,16 @@
+import weaver.jp.VarRefJp;
+import weaver.Weaver;
+
+_lara_dummy_ = Object.defineProperty(VarRefJp.prototype, 'name', {
+	get: function () { 
+		return this.astNode.get("name").getAsString(); 
+	}
+});
+
+/*
+_lara_dummy_ = Object.defineProperty(VarRefJp.prototype, 'decl', {
+	get: function () { 
+		 
+	}
+});
+*/
