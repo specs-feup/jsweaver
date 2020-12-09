@@ -16,6 +16,8 @@ import weaver.jp.JackdawConstructorCallJp;
 import weaver.jp.JackdawLoopJp;
 import weaver.jp.JackdawIfJp;
 import weaver.jp.JackdawBinaryJp;
+import weaver.jp.JackdawFileJp;
+import weaver.jp.JackdawProgramJp;
 
 // Patches weaver.JoinPoint and other classes
 import weaver.jp.JoinPointsCommonPath;

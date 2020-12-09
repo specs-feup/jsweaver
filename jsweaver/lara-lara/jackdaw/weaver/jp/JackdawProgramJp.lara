@@ -1,0 +1,9 @@
+import weaver.jp.ProgramJp;
+import weaver.Weaver;
+
+
+_lara_dummy_ = Object.defineProperty(ProgramJp.prototype, 'parent', {
+	get: function () { 
+		return undefined; 
+	}
+});

@@ -49,6 +49,7 @@ public class JackdawCommonLanguage {
 		JOINPOINT_MAPPER.put("CallExpression", node -> "CallJp");
 		
 		JOINPOINT_MAPPER.put("FunctionDeclaration", node -> "FunctionJp");
+		JOINPOINT_MAPPER.put("FunctionExpression", node -> "FunctionJp");
 		JOINPOINT_MAPPER.put("ClassDeclaration", node -> "ClassJp");
 		JOINPOINT_MAPPER.put("Program", node -> "FileJp");
 		JOINPOINT_MAPPER.put("Project", node -> "ProgramJp");
@@ -72,8 +73,7 @@ public class JackdawCommonLanguage {
 		JOINPOINT_MAPPER.put("Literal", node -> "ExprJp");
 		JOINPOINT_MAPPER.put("ArrayExpression", node -> "ExprJp");
 		JOINPOINT_MAPPER.put("ObjectExpression", node -> "ExprJp");
-		JOINPOINT_MAPPER.put("FunctionExpression", node -> "ExprJp");
-		JOINPOINT_MAPPER.put("ArrowFunctionExpression", node -> "ExprJp");		
+		JOINPOINT_MAPPER.put("ArrowFunctionExpression", node -> "LambdaJp");		
 		JOINPOINT_MAPPER.put("ClassExpression", node -> "ExprJp");
 		JOINPOINT_MAPPER.put("TaggedTemplateExpression", node -> "ExprJp");
 		JOINPOINT_MAPPER.put("Super", node -> "ExprJp");
