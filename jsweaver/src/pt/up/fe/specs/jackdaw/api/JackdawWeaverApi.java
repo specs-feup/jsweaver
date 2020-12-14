@@ -3,6 +3,7 @@ package pt.up.fe.specs.jackdaw.api;
 import org.lara.interpreter.weaver.utils.LaraResourceProvider;
 
 public enum JackdawWeaverApi implements LaraResourceProvider {
+	JACKDAW_ELSE_JP("jp/JackdawElseJp.lara"),
 	JACKDAW_PROGRAM_JP("jp/JackdawProgramJp.lara"),
 	JACKDAW_FILE_JP("jp/JackdawFileJp.lara"),
 	JACKDAW_LOOP_JP("jp/JackdawLoopJp.lara"),

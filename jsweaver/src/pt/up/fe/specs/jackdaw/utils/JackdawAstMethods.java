@@ -17,12 +17,14 @@
 
 package pt.up.fe.specs.jackdaw.utils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import org.lara.interpreter.weaver.ast.AAstMethods;
 import org.lara.interpreter.weaver.interf.JoinPoint;
 import org.lara.interpreter.weaver.interf.WeaverEngine;
 
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import pt.up.fe.specs.jackdaw.JackdawQueryEngine;
@@ -52,6 +54,34 @@ public class JackdawAstMethods extends AAstMethods<JsonObject> {
 
 	@Override
 	protected Object[] getChildrenImpl(JsonObject node) {
+		if (node.get("type").getAsString().equals("IfStatement")) {
+			var children = new ArrayList<JsonObject>();
+
+			// var testJp = new JsonObject();
+			// testJp.add("test",node.get("test"));
+			children.add(node.get("test").getAsJsonObject());
+
+			if (!node.get("consequent").isJsonNull()) {
+				var thenJp = new JsonObject();
+				thenJp.addProperty("type", "ThenStatement");
+				thenJp.add("body", node.get("consequent"));
+				thenJp.add("loc", node.get("consequent").getAsJsonObject().get("loc"));
+				children.add(thenJp);
+			}
+
+			if (!node.get("alternate").isJsonNull()) {
+				var elseJp = new JsonObject();
+				elseJp.addProperty("type", "ElseStatement");
+				elseJp.add("body", node.get("alternate"));
+				elseJp.add("loc", node.get("alternate").getAsJsonObject().get("loc"));
+				children.add(elseJp);
+			}
+			// System.out.println("Here");
+			// System.out.println(children);
+			return children.toArray();
+
+		}
+
 		return Arrays.stream(JackdawQueryEngine.getChildren(node)).map(jp -> jp.getNode()).toArray();
 	}
 
@@ -63,7 +93,32 @@ public class JackdawAstMethods extends AAstMethods<JsonObject> {
 
 	@Override
 	protected Object getParentImpl(JsonObject node) {
-		return ParentMapper.getParent(node);
+		if (node.get("type").getAsString().equals("ThenStatement")
+				|| node.get("type").getAsString().equals("ElseStatement")) {
+			return ParentMapper.getParent(node.get("body").getAsJsonObject());
+			
+		}
+		var parent = ParentMapper.getParent(node);
+		if (parent.get("type").getAsString().equals("IfStatement")) {
+			if(parent.get("consequent").equals(node)) {
+				var thenJp = new JsonObject();
+				thenJp.addProperty("type", "ThenStatement");
+				thenJp.add("body", parent.get("consequent"));
+				thenJp.add("loc", parent.get("consequent").getAsJsonObject().get("loc"));
+				return thenJp;
+			}
+			
+			if(parent.get("alternate").equals(node)) {
+				var elseJp = new JsonObject();
+				elseJp.addProperty("type", "ElseStatement");
+				elseJp.add("body", parent.get("alternate"));
+				elseJp.add("loc", parent.get("alternate").getAsJsonObject().get("loc"));
+				return elseJp;
+			}
+			
+		}
+
+		return parent;
 	}
 
 }
