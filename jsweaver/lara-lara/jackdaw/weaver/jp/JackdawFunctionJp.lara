@@ -9,7 +9,9 @@ _lara_dummy_ = Object.defineProperty(FunctionJp.prototype, 'id', {
 
 _lara_dummy_ = Object.defineProperty(FunctionJp.prototype, 'name', {
 	get: function () {  
-		var functionIdentifier = this.astNode.get("id"); 
+		var functionIdentifier = this.astNode.get("id");
+		if(functionIdentifier.isJsonNull())
+			return "<Anonymous function>"; 
 		return functionIdentifier.get("name").getAsString(); 
 	}
 });
@@ -42,5 +44,23 @@ _lara_dummy_ = Object.defineProperty(FunctionJp.prototype, 'stmts', {
 			return CommonJoinPoints.toJoinPoints(Weaver.toJs(functionStmts));
 		}
 		return []; 
+	}
+});
+
+_lara_dummy_ = Object.defineProperty(FunctionJp.prototype, 'isAnonymous', {
+	get: function () {
+		return this.astNode.get("type").getAsString() === "FunctionExpression"; 
+	}
+});
+
+_lara_dummy_ = Object.defineProperty(FunctionJp.prototype, 'isDeclarative', {
+	get: function () {
+		for(child of this.stmts)
+			if(child.astNode.get("type").getAsString() !== "ExpressionStatement" &&
+				child.astNode.get("type").getAsString() !== "VariableDeclaration")
+				return false;
+		return true;
+		
+		
 	}
 });

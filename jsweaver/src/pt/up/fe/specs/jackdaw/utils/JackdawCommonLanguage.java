@@ -30,6 +30,11 @@ public class JackdawCommonLanguage {
 	private static final Map<String, Function<JsonObject, String>> JOINPOINT_MAPPER;
 	static {
 		JOINPOINT_MAPPER = new HashMap<>();
+		JOINPOINT_MAPPER.put("ElseStatement", node -> "ElseJp");
+		JOINPOINT_MAPPER.put("ThenStatement", node -> "ThenJp");
+		JOINPOINT_MAPPER.put("ThrowStatement", node -> "ThrowJp");
+		JOINPOINT_MAPPER.put("CatchClause", node -> "CatchJp");
+		JOINPOINT_MAPPER.put("TryStatement", node -> "TryJp");
 		JOINPOINT_MAPPER.put("ConditionalExpression", node -> "TernaryJp");
 		JOINPOINT_MAPPER.put("BinaryExpression", node -> "BinaryJp");
 		JOINPOINT_MAPPER.put("LogicalExpression", node -> "BinaryJp");

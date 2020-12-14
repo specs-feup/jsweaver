@@ -19,3 +19,4 @@ _lara_dummy_ = Object.defineProperty(JoinPoint.prototype, 'code', {
 		return Weaver.AST_METHODS.toJavaJoinPoint(this.astNode).code; 
 	}
 });
+
