@@ -1,1 +1,7 @@
 bin/
+
+### Default folder for executing applications
+**/run/**
+!**/run/*.launch
+!**/run/*.deploy
+**/run/*-local.launch
