@@ -29,6 +29,7 @@ import pt.up.fe.specs.jackdaw.api.JackdawWeaverApi;
 import pt.up.fe.specs.jackdaw.api.LaraCoreApi;
 import pt.up.fe.specs.jackdaw.utils.JackdawAstMethods;
 import pt.up.fe.specs.jsast.JackdawEngine;
+import pt.up.fe.specs.lara.lcl.LaraCommonLanguageApiResource;
 import pt.up.fe.specs.util.SpecsIo;
 import pt.up.fe.specs.util.lazy.Lazy;
 import pt.up.fe.specs.util.providers.ResourceProvider;
@@ -138,6 +139,7 @@ public class JackdawWeaver extends AJsWeaver {
         List<ResourceProvider> apis = new ArrayList<>();
 
         apis.addAll(ResourceProvider.getResourcesFromEnum(LaraCoreApi.class));
+        apis.addAll(ResourceProvider.getResourcesFromEnum(LaraCommonLanguageApiResource.class));
         apis.addAll(ResourceProvider.getResourcesFromEnum(JackdawLaraApi.class));
         apis.addAll(ResourceProvider.getResourcesFromEnum(JackdawWeaverApi.class));
         apis.addAll(ResourceProvider.getResourcesFromEnum(JackdawObfuscationApi.class));
@@ -147,7 +149,7 @@ public class JackdawWeaver extends AJsWeaver {
 
     @Override
     public String getName() {
-        return "Jackdaw v0.1";
+        return "Jackdaw";
     }
 
     /**
@@ -224,12 +226,12 @@ public class JackdawWeaver extends AJsWeaver {
     public JoinPoint getRootJp() {
         return select();
     }
-    
+
     @Override
     public Object getRootNode() {
         return select().getNode();
     }
-    
+
     @Override
     public AstMethods getAstMethods() {
         return new JackdawAstMethods(this);
