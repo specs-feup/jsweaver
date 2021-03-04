@@ -5,36 +5,6 @@ _lara_dummy_ = Object.defineProperty(CallJp.prototype, 'name', {
 	get: function () {  
 	
 		return CallJp._getName(this.astNode);
-	/*
-		var callee = Ast.toWeaverJoinPoint(this.astNode).callee;
-
-	println(Ast.toWeaverJoinPoint(this.astNode).joinPointType);
-		
-		
-		if(callee.instanceOf("identifier")) {
-				return callee.name;
-		}
-
-		if(callee.instanceOf("memberExpression")) {
-				return callee.property.name;
-		}
-		
-		println("CallJp.name: Not implemented for callees which Jackdaw join points are of type '"+callee.joinPointType+"'");
-		return undefined;
-		*/
-/*		
-		println("Callee: " + Ast.toWeaverJoinPoint(this.astNode).callee.joinPointType);
-		println("Callee Name: " + Ast.toWeaverJoinPoint(this.astNode).callee.name);
-		println("Callee Object: " + Ast.toWeaverJoinPoint(this.astNode).callee.object.joinPointType);		
-
-//		println("Name: " + weaverJp.name);
-		var name = this.astNode.get("callee").get("name");
-		if(name === null) {
-			println("NAME IS NULL! " + this.astNode);
-			println("Code: " + this.astNode.code);			
-		}
-		return this.astNode.get("callee").get("name").getAsString();
-*/
 	}
 });
 
