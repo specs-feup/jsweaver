@@ -1,8 +1,7 @@
 package pt.up.fe.specs.jackdaw;
 
-import org.lara.interpreter.joptions.gui.LaraLauncher;
-
 import larai.LaraI;
+import pt.up.fe.specs.lara.WeaverLauncher;
 import pt.up.fe.specs.util.SpecsLogs;
 import pt.up.fe.specs.util.SpecsSystem;
 
@@ -30,6 +29,6 @@ public class JackdawLauncher {
     }
 
     public static boolean execute(String[] args) {
-        return LaraLauncher.launch(args, new JackdawWeaver());
+        return new WeaverLauncher(new JackdawWeaver()).launch(args);
     }
 }
