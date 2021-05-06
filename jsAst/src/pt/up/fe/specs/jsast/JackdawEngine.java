@@ -125,6 +125,7 @@ public class JackdawEngine {
         String stringAst = javascriptEngine.convert(result, String.class);
         // String stringAst = (String) javascriptEngine.get("string");
         JsonElement jsonTree = parser.parse(stringAst);
+        // System.out.println("TREE: " + jsonTree);
         JsonObject program = jsonTree.getAsJsonObject();
         JsonArray statements = program.get("body").getAsJsonArray();
         return statements;

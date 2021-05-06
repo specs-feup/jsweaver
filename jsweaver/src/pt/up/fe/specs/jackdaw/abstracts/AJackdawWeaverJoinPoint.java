@@ -46,14 +46,14 @@ public abstract class AJackdawWeaverJoinPoint extends AJoinPoint {
     @Override
     public AJoinPoint getRootImpl() {
         JsonObject rootObject = ParentMapper.getRoot(this.getNode());
-        AJoinPoint rootJoinpoint = (AJoinPoint) JoinpointCreator.create(rootObject);
+        AJoinPoint rootJoinpoint = JoinpointCreator.create(rootObject);
         return rootJoinpoint;
     }
 
     @Override
     public AJoinPoint getFileImpl() {
         JsonObject fileObject = ParentMapper.getFile(this.getNode());
-        AJoinPoint fileJoinpoint = (AJoinPoint) JoinpointCreator.create(fileObject);
+        AJoinPoint fileJoinpoint = JoinpointCreator.create(fileObject);
         return fileJoinpoint;
     }
 
@@ -68,7 +68,7 @@ public abstract class AJackdawWeaverJoinPoint extends AJoinPoint {
 
         parentNode.get("type").getAsString();
 
-        AJoinPoint parentJoinpoint = (AJoinPoint) JoinpointCreator.create(parentNode);
+        AJoinPoint parentJoinpoint = JoinpointCreator.create(parentNode);
         return parentJoinpoint;
     }
 
@@ -90,12 +90,15 @@ public abstract class AJackdawWeaverJoinPoint extends AJoinPoint {
     public AJoinPoint[] insertImpl(String position, String code) {
         List<AJoinPoint> stmts = new ArrayList<>();
         try {
+
             JsonArray statements = JackdawEngine.parseInsertedCode(code);
+
             JackdawInserter.insertStatements(this.getNode(), statements, position);
             for (JsonElement element : statements) {
                 stmts.add(JoinpointCreator.create(element.getAsJsonObject()));
             }
             ParentMapper.setDirty();
+
             return stmts.toArray(new AJoinPoint[0]);
 
         } catch (ScriptException error) {
