@@ -36,7 +36,7 @@ public class JackdawWeaverOptions {
             return option;
         }
 
-        SpecsLogs.msgWarn("Key '" + key + "' is not defined in class 'WEAVER_OPTIONS'");
+        SpecsLogs.warn("Key '" + key + "' is not defined in class 'WEAVER_OPTIONS'");
 
         return WeaverOptionBuilder.build(key);
     }
