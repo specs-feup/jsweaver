@@ -22,7 +22,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 import pt.up.fe.specs.jackdaw.abstracts.AJackdawWeaverJoinPoint;
-import pt.up.fe.specs.jackdaw.abstracts.weaver.AJsWeaver;
+import pt.up.fe.specs.jackdaw.abstracts.weaver.AJackdawWeaver;
 import pt.up.fe.specs.jackdaw.api.JackdawLaraApi;
 import pt.up.fe.specs.jackdaw.api.JackdawObfuscationApi;
 import pt.up.fe.specs.jackdaw.api.JackdawWeaverApi;
@@ -43,7 +43,7 @@ import pt.up.fe.specs.util.providers.ResourceProvider;
  * 
  * @author Lara Weaver Generator
  */
-public class JackdawWeaver extends AJsWeaver {
+public class JackdawWeaver extends AJackdawWeaver {
 
     public static LanguageSpecification getLanguageSpec() {
         return LanguageSpecification.newInstance(() -> "jackdaw/specs/joinPointModel.xml",

@@ -1,6 +1,6 @@
 package pt.up.fe.specs.jackdaw.abstracts.weaver;
 
-import org.lara.interpreter.weaver.interf.WeaverEngine;
+import org.lara.interpreter.weaver.LaraWeaverEngine;
 import java.util.Arrays;
 import java.util.List;
 import pt.up.fe.specs.jackdaw.enums.LoopKind;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * The implementation of the abstract methods is mandatory!
  * @author Lara C.
  */
-public abstract class AJackdawWeaver extends WeaverEngine {
+public abstract class AJackdawWeaver extends LaraWeaverEngine {
 
     /**
      * Get the list of available actions in the weaver

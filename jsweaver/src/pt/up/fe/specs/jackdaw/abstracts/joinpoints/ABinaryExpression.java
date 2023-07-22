@@ -95,6 +95,132 @@ public abstract class ABinaryExpression extends AExpression {
     }
 
     /**
+     * Get value on attribute parent
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint getParentImpl() {
+        return this.aExpression.getParentImpl();
+    }
+
+    /**
+     * Get value on attribute joinPointName
+     * @return the attribute's value
+     */
+    @Override
+    public String getJoinPointNameImpl() {
+        return this.aExpression.getJoinPointNameImpl();
+    }
+
+    /**
+     * Get value on attribute ast
+     * @return the attribute's value
+     */
+    @Override
+    public String getAstImpl() {
+        return this.aExpression.getAstImpl();
+    }
+
+    /**
+     * Get value on attribute code
+     * @return the attribute's value
+     */
+    @Override
+    public String getCodeImpl() {
+        return this.aExpression.getCodeImpl();
+    }
+
+    /**
+     * Get value on attribute line
+     * @return the attribute's value
+     */
+    @Override
+    public Integer getLineImpl() {
+        return this.aExpression.getLineImpl();
+    }
+
+    /**
+     * Get value on attribute ancestor
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint ancestorImpl(String joinPointType) {
+        return this.aExpression.ancestorImpl(joinPointType);
+    }
+
+    /**
+     * Get value on attribute column
+     * @return the attribute's value
+     */
+    @Override
+    public Integer getColumnImpl() {
+        return this.aExpression.getColumnImpl();
+    }
+
+    /**
+     * Get value on attribute type
+     * @return the attribute's value
+     */
+    @Override
+    public String getTypeImpl() {
+        return this.aExpression.getTypeImpl();
+    }
+
+    /**
+     * Get value on attribute descendantsArrayImpl
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint[] getDescendantsArrayImpl() {
+        return this.aExpression.getDescendantsArrayImpl();
+    }
+
+    /**
+     * Get value on attribute uuid
+     * @return the attribute's value
+     */
+    @Override
+    public String getUuidImpl() {
+        return this.aExpression.getUuidImpl();
+    }
+
+    /**
+     * Get value on attribute file
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint getFileImpl() {
+        return this.aExpression.getFileImpl();
+    }
+
+    /**
+     * Get value on attribute field
+     * @return the attribute's value
+     */
+    @Override
+    public Object fieldImpl(String fieldName) {
+        return this.aExpression.fieldImpl(fieldName);
+    }
+
+    /**
+     * Get value on attribute childrenArrayImpl
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint[] getChildrenArrayImpl() {
+        return this.aExpression.getChildrenArrayImpl();
+    }
+
+    /**
+     * Get value on attribute root
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint getRootImpl() {
+        return this.aExpression.getRootImpl();
+    }
+
+    /**
      * 
      * @param position 
      * @param code 
@@ -112,14 +238,6 @@ public abstract class ABinaryExpression extends AExpression {
     @Override
     public AJoinPoint[] insertImpl(String position, JoinPoint code) {
         return this.aExpression.insertImpl(position, code);
-    }
-
-    /**
-     * 
-     */
-    @Override
-    public String toString() {
-        return this.aExpression.toString();
     }
 
     /**

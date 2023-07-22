@@ -86,6 +86,132 @@ public abstract class AWhileStatement extends ALoop {
     }
 
     /**
+     * Get value on attribute parent
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint getParentImpl() {
+        return this.aLoop.getParentImpl();
+    }
+
+    /**
+     * Get value on attribute joinPointName
+     * @return the attribute's value
+     */
+    @Override
+    public String getJoinPointNameImpl() {
+        return this.aLoop.getJoinPointNameImpl();
+    }
+
+    /**
+     * Get value on attribute ast
+     * @return the attribute's value
+     */
+    @Override
+    public String getAstImpl() {
+        return this.aLoop.getAstImpl();
+    }
+
+    /**
+     * Get value on attribute code
+     * @return the attribute's value
+     */
+    @Override
+    public String getCodeImpl() {
+        return this.aLoop.getCodeImpl();
+    }
+
+    /**
+     * Get value on attribute line
+     * @return the attribute's value
+     */
+    @Override
+    public Integer getLineImpl() {
+        return this.aLoop.getLineImpl();
+    }
+
+    /**
+     * Get value on attribute ancestor
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint ancestorImpl(String joinPointType) {
+        return this.aLoop.ancestorImpl(joinPointType);
+    }
+
+    /**
+     * Get value on attribute column
+     * @return the attribute's value
+     */
+    @Override
+    public Integer getColumnImpl() {
+        return this.aLoop.getColumnImpl();
+    }
+
+    /**
+     * Get value on attribute type
+     * @return the attribute's value
+     */
+    @Override
+    public String getTypeImpl() {
+        return this.aLoop.getTypeImpl();
+    }
+
+    /**
+     * Get value on attribute descendantsArrayImpl
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint[] getDescendantsArrayImpl() {
+        return this.aLoop.getDescendantsArrayImpl();
+    }
+
+    /**
+     * Get value on attribute uuid
+     * @return the attribute's value
+     */
+    @Override
+    public String getUuidImpl() {
+        return this.aLoop.getUuidImpl();
+    }
+
+    /**
+     * Get value on attribute file
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint getFileImpl() {
+        return this.aLoop.getFileImpl();
+    }
+
+    /**
+     * Get value on attribute field
+     * @return the attribute's value
+     */
+    @Override
+    public Object fieldImpl(String fieldName) {
+        return this.aLoop.fieldImpl(fieldName);
+    }
+
+    /**
+     * Get value on attribute childrenArrayImpl
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint[] getChildrenArrayImpl() {
+        return this.aLoop.getChildrenArrayImpl();
+    }
+
+    /**
+     * Get value on attribute root
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint getRootImpl() {
+        return this.aLoop.getRootImpl();
+    }
+
+    /**
      * 
      * @param position 
      * @param code 
@@ -103,14 +229,6 @@ public abstract class AWhileStatement extends ALoop {
     @Override
     public AJoinPoint[] insertImpl(String position, JoinPoint code) {
         return this.aLoop.insertImpl(position, code);
-    }
-
-    /**
-     * 
-     */
-    @Override
-    public String toString() {
-        return this.aLoop.toString();
     }
 
     /**
