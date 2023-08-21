@@ -94,13 +94,13 @@ public abstract class AProject extends AJackdawWeaverJoinPoint {
         AST("ast"),
         CODE("code"),
         LINE("line"),
-        ANCESTOR("ancestor"),
+        GETANCESTOR("getAncestor"),
+        GETFIELD("getField"),
         COLUMN("column"),
         TYPE("type"),
         DESCENDANTS("descendants"),
         UUID("uuid"),
         FILE("file"),
-        FIELD("field"),
         CHILDREN("children"),
         ROOT("root");
         private String name;

@@ -156,7 +156,7 @@ function discoverObfuscableFunctions($file,excludedFunctions){
 				var fileArray = $file["insert"]("replace",previousCode);
 				$file = fileArray[0];
 				if(!$file.instanceOf('file')) {
-					$file = $file.ancestor('file');
+					$file = $file.getAncestor('file');
 				}
 				
 				if($file === undefined) {
@@ -176,7 +176,7 @@ function discoverObfuscableFunctions($file,excludedFunctions){
 				var fileArray = $file["insert"]("replace",previousCode);
 				$file = fileArray[0];
 				if(!$file.instanceOf('file')) {
-					$file = $file.ancestor('file');
+					$file = $file.getAncestor('file');
 				}
 				
 				if($file === undefined) {

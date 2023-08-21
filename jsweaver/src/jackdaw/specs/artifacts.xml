@@ -7,14 +7,14 @@
 	<global>
 		<attribute name="root" type="joinpoint" tooltip="Returns the 'project' joinpoint" />
 		<attribute name="file" type="joinpoint" tooltip="Returns the 'file' joinpoint" />
-		<attribute name="parent" type="joinpoint" tooltip="Returns the 'parent' node of this joinpoint" />
-		<attribute name="ancestor" type="joinpoint" tooltip="Returns the first ancestor of the given type">
+		<attribute name="parent" type="joinpoint"
+			tooltip="Returns the 'parent' node of this joinpoint" />
+		<attribute name="getAncestor" type="joinpoint"
+			tooltip="Returns the first ancestor of the given type">
 			<parameter name="joinPointType" type="String" />
 		</attribute>
 		<attribute name="type" type="string" tooltip="The type of the join point" />
-
-		<attribute name="field" type="Object"
-			tooltip="Returns the value of the given field">
+		<attribute name="getField" type="Object" tooltip="Returns the value of the given field">
 			<parameter name="fieldName" type="String" />
 		</attribute>
 
@@ -28,7 +28,7 @@
 		<attribute name="uuid" type="String" tooltip="Uniquely identifies the AST node."/>
 		<attribute name="code" type="String" tooltip="Equivalent javascript code of this joinpoint."/>
 	</global>
-	
+
 	<!-- PROGRAM -->
 	<artifact class="project">
 	</artifact>
@@ -150,7 +150,7 @@
 	<artifact class="updateExpression">
 		<attribute name="operator" type="string" tooltip="Operator of this update expression." />
 		<attribute name="argument" type="joinpoint" tooltip="Argument of this update expression." />
-			<attribute name="prefix" type="boolean" tooltip="If the operator of this update expression is a prefix." />
+		<attribute name="prefix" type="boolean" tooltip="If the operator of this update expression is a prefix." />
 	</artifact>
 	
 	<artifact class="functionExpression">
@@ -160,8 +160,8 @@
 		<attribute name="generator" type="boolean" tooltip="" />
 		<attribute name="expression" type="boolean" tooltip="" />
 	</artifact>
-	
-	
+
+
 	<!-- ENUMS -->
 	<enum name="LoopKind">	
 		<value name="FOR"/>

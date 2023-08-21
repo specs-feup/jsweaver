@@ -55,7 +55,7 @@ function generateOpaquePredicate(method){
 }
 function isPredicate($function){
 	for(var p of predicates){
-		if($function.field("id").name == p.id) return true;
+		if($function.getField("id").name == p.id) return true;
 	}
 	return false;
 }

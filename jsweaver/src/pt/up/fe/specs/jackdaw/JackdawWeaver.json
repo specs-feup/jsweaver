@@ -9,43 +9,6 @@
 			"children": [
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -91,24 +54,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -163,55 +139,6 @@
 									{
 										"type": "String",
 										"name": "uuid"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
 									}]
 					}]
 		},
@@ -249,43 +176,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -331,24 +221,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -403,55 +306,6 @@
 									{
 										"type": "String",
 										"name": "uuid"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
 									}]
 					}]
 		},
@@ -489,43 +343,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -571,24 +388,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -643,55 +473,6 @@
 									{
 										"type": "String",
 										"name": "uuid"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
 									}]
 					}]
 		},
@@ -702,43 +483,6 @@
 			"children": [
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -784,24 +528,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -856,19 +613,6 @@
 									{
 										"type": "String",
 										"name": "uuid"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
 									}]
 					},
 					{
@@ -885,42 +629,6 @@
 						"type": "select",
 						"clazz": "classBody",
 						"alias": ""
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
-									}]
 					}]
 		},
 		{
@@ -928,43 +636,6 @@
 			"name": "breakStatement",
 			"extends": "joinpoint"		,
 			"children": [
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
 					{
 						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
@@ -1012,24 +683,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -1084,55 +768,6 @@
 									{
 										"type": "String",
 										"name": "uuid"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
 									}]
 					}]
 		},
@@ -1170,43 +805,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -1252,24 +850,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -1324,55 +935,6 @@
 									{
 										"type": "String",
 										"name": "uuid"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
 									}]
 					}]
 		},
@@ -1392,43 +954,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -1474,24 +999,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -1549,58 +1087,9 @@
 									}]
 					},
 					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
 						"type": "select",
 						"clazz": "blockStatement",
 						"alias": ""
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
-									}]
 					}]
 		},
 		{
@@ -1610,43 +1099,6 @@
 			"children": [
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -1692,24 +1144,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -1767,58 +1232,9 @@
 									}]
 					},
 					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
 						"type": "select",
 						"clazz": "scope",
 						"alias": ""
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
-									}]
 					}]
 		},
 		{
@@ -1846,43 +1262,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -1928,24 +1307,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -2003,58 +1395,9 @@
 									}]
 					},
 					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
 						"type": "select",
 						"clazz": "classBody",
 						"alias": ""
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
-									}]
 					}]
 		},
 		{
@@ -2064,43 +1407,6 @@
 			"children": [
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -2146,24 +1452,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -2218,55 +1537,6 @@
 									{
 										"type": "String",
 										"name": "uuid"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
 									}]
 					}]
 		},
@@ -2286,43 +1556,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -2368,24 +1601,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -2443,58 +1689,9 @@
 									}]
 					},
 					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
 						"type": "select",
 						"clazz": "declarator",
 						"alias": ""
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
-									}]
 					}]
 		},
 		{
@@ -2522,43 +1719,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -2604,24 +1764,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -2679,19 +1852,6 @@
 									}]
 					},
 					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
 						"type": "select",
 						"clazz": "identifier",
 						"alias": ""
@@ -2707,42 +1867,6 @@
 									{
 										"type": "String",
 										"name": "name",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
 										"defaultValue": ""
 									}]
 					}]
@@ -2790,43 +1914,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -2872,24 +1959,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -2947,58 +2047,9 @@
 									}]
 					},
 					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
 						"type": "select",
 						"clazz": "blockStatement",
 						"alias": ""
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
-									}]
 					}]
 		},
 		{
@@ -3008,43 +2059,6 @@
 			"children": [
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -3090,24 +2104,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -3162,55 +2189,6 @@
 									{
 										"type": "String",
 										"name": "uuid"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
 									}]
 					}]
 		},
@@ -3230,43 +2208,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -3312,24 +2253,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -3384,19 +2338,6 @@
 									{
 										"type": "String",
 										"name": "uuid"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
 									}]
 					},
 					{
@@ -3418,42 +2359,6 @@
 						"type": "select",
 						"clazz": "updateExpression",
 						"alias": ""
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
-									}]
 					}]
 		},
 		{
@@ -3481,43 +2386,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -3563,24 +2431,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -3638,58 +2519,9 @@
 									}]
 					},
 					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
 						"type": "select",
 						"clazz": "scope",
 						"alias": ""
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
-									}]
 					}]
 		},
 		{
@@ -3753,43 +2585,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -3835,24 +2630,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -3910,58 +2718,9 @@
 									}]
 					},
 					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
 						"type": "select",
 						"clazz": "blockStatement",
 						"alias": ""
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
-									}]
 					}]
 		},
 		{
@@ -4025,43 +2784,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -4107,24 +2829,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -4182,19 +2917,6 @@
 									}]
 					},
 					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
 						"type": "select",
 						"clazz": "blockStatement",
 						"alias": ""
@@ -4229,42 +2951,6 @@
 									{
 										"type": "String",
 										"name": "name",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
 										"defaultValue": ""
 									}]
 					}]
@@ -4321,43 +3007,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -4403,24 +3052,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -4478,58 +3140,9 @@
 									}]
 					},
 					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
 						"type": "select",
 						"clazz": "blockStatement",
 						"alias": ""
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
-									}]
 					}]
 		},
 		{
@@ -4548,43 +3161,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -4630,24 +3206,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -4705,19 +3294,6 @@
 									}]
 					},
 					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
 						"type": "action",
 						"tooltip": "Rename this identifier.",
 						"children": [
@@ -4728,42 +3304,6 @@
 									{
 										"type": "String",
 										"name": "name",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
 										"defaultValue": ""
 									}]
 					}]
@@ -4784,43 +3324,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -4866,24 +3369,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -4941,19 +3457,6 @@
 									}]
 					},
 					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
 						"type": "select",
 						"clazz": "scope",
 						"alias": "then"
@@ -4962,42 +3465,6 @@
 						"type": "select",
 						"clazz": "scope",
 						"alias": "else"
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
-									}]
 					}]
 		},
 		{
@@ -5016,43 +3483,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -5098,24 +3528,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -5170,55 +3613,6 @@
 									{
 										"type": "String",
 										"name": "uuid"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
 									}]
 					}]
 		},
@@ -5256,43 +3650,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -5338,24 +3695,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -5410,55 +3780,6 @@
 									{
 										"type": "String",
 										"name": "uuid"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
 									}]
 					}]
 		},
@@ -5496,43 +3817,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -5578,24 +3862,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -5650,55 +3947,6 @@
 									{
 										"type": "String",
 										"name": "uuid"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
 									}]
 					}]
 		},
@@ -5745,43 +3993,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -5827,24 +4038,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -5902,58 +4126,9 @@
 									}]
 					},
 					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
 						"type": "select",
 						"clazz": "functionExpression",
 						"alias": ""
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
-									}]
 					}]
 		},
 		{
@@ -5964,43 +4139,6 @@
 			"children": [
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -6046,24 +4184,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -6121,58 +4272,9 @@
 									}]
 					},
 					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
 						"type": "select",
 						"clazz": "file",
 						"alias": ""
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
-									}]
 					}]
 		},
 		{
@@ -6183,43 +4285,6 @@
 			"children": [
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -6265,24 +4330,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -6337,19 +4415,6 @@
 									{
 										"type": "String",
 										"name": "uuid"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
 									}]
 					},
 					{
@@ -6471,42 +4536,6 @@
 						"type": "select",
 						"clazz": "assignmentExpression",
 						"alias": ""
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
-									}]
 					}]
 		},
 		{
@@ -6514,43 +4543,6 @@
 			"name": "statement",
 			"extends": "joinpoint"		,
 			"children": [
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
 					{
 						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
@@ -6598,24 +4590,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -6673,19 +4678,6 @@
 									}]
 					},
 					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
 						"type": "select",
 						"clazz": "blockStatement",
 						"alias": ""
@@ -6694,42 +4686,6 @@
 						"type": "select",
 						"clazz": "classBody",
 						"alias": ""
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
-									}]
 					}]
 		},
 		{
@@ -6748,43 +4704,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -6830,24 +4749,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -6905,58 +4837,9 @@
 									}]
 					},
 					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
 						"type": "select",
 						"clazz": "scope",
 						"alias": ""
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
-									}]
 					}]
 		},
 		{
@@ -6975,43 +4858,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -7057,24 +4903,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -7129,19 +4988,6 @@
 									{
 										"type": "String",
 										"name": "uuid"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
 									}]
 					},
 					{
@@ -7153,42 +4999,6 @@
 						"type": "select",
 						"clazz": "switchCase",
 						"alias": "case"
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
-									}]
 					}]
 		},
 		{
@@ -7196,43 +5006,6 @@
 			"name": "thisExpression",
 			"extends": "expression"		,
 			"children": [
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
 					{
 						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
@@ -7280,24 +5053,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -7352,55 +5138,6 @@
 									{
 										"type": "String",
 										"name": "uuid"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
 									}]
 					}]
 		},
@@ -7411,43 +5148,6 @@
 			"children": [
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -7493,24 +5193,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -7565,19 +5278,6 @@
 									{
 										"type": "String",
 										"name": "uuid"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
 									}]
 					},
 					{
@@ -7594,42 +5294,6 @@
 						"type": "select",
 						"clazz": "catchClause",
 						"alias": "catch"
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
-									}]
 					}]
 		},
 		{
@@ -7666,43 +5330,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -7748,24 +5375,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -7820,55 +5460,6 @@
 									{
 										"type": "String",
 										"name": "uuid"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
 									}]
 					}]
 		},
@@ -7915,43 +5506,6 @@
 					},
 					{
 						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "attributes"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "selects"
-									}]
-					},
-					{
-						"type": "attribute",
-						"children": [
-									{
-										"type": "String[]",
-										"name": "actions"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "ancestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -7997,24 +5551,37 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "field"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
-									}]
-					},
-					{
-						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "getAncestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType"
+									}]
+					},
+					{
+						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "getField"
+									},
+									{
+										"type": "String",
+										"name": "fieldName"
 									}]
 					},
 					{
@@ -8072,58 +5639,9 @@
 									}]
 					},
 					{
-						"type": "attribute",
-						"tooltip": "true if the current join point is an instance of the given type",
-						"children": [
-									{
-										"type": "Boolean",
-										"name": "instanceOf"
-									},
-									{
-										"type": "String",
-										"name": "name"
-									}]
-					},
-					{
 						"type": "select",
 						"clazz": "blockStatement",
 						"alias": ""
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "insert"
-									},
-									{
-										"type": "[before| after| replace]",
-										"name": "position",
-										"defaultValue": ""
-									},
-									{
-										"type": "String",
-										"name": "code",
-										"defaultValue": ""
-									}]
-					},
-					{
-						"type": "action",
-						"children": [
-									{
-										"type": "void",
-										"name": "def"
-									},
-									{
-										"type": "String",
-										"name": "attribute",
-										"defaultValue": ""
-									},
-									{
-										"type": "Object",
-										"name": "value",
-										"defaultValue": ""
-									}]
 					}]
 		},
 		{

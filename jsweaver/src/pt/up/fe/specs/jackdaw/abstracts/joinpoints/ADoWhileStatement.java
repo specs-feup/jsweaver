@@ -131,12 +131,21 @@ public abstract class ADoWhileStatement extends ALoop {
     }
 
     /**
-     * Get value on attribute ancestor
+     * Get value on attribute getAncestor
      * @return the attribute's value
      */
     @Override
-    public AJoinPoint ancestorImpl(String joinPointType) {
-        return this.aLoop.ancestorImpl(joinPointType);
+    public AJoinPoint getAncestorImpl(String joinPointType) {
+        return this.aLoop.getAncestorImpl(joinPointType);
+    }
+
+    /**
+     * Get value on attribute getField
+     * @return the attribute's value
+     */
+    @Override
+    public Object getFieldImpl(String fieldName) {
+        return this.aLoop.getFieldImpl(fieldName);
     }
 
     /**
@@ -182,15 +191,6 @@ public abstract class ADoWhileStatement extends ALoop {
     @Override
     public AJoinPoint getFileImpl() {
         return this.aLoop.getFileImpl();
-    }
-
-    /**
-     * Get value on attribute field
-     * @return the attribute's value
-     */
-    @Override
-    public Object fieldImpl(String fieldName) {
-        return this.aLoop.fieldImpl(fieldName);
     }
 
     /**
@@ -326,13 +326,13 @@ public abstract class ADoWhileStatement extends ALoop {
         AST("ast"),
         CODE("code"),
         LINE("line"),
-        ANCESTOR("ancestor"),
+        GETANCESTOR("getAncestor"),
+        GETFIELD("getField"),
         COLUMN("column"),
         TYPE("type"),
         DESCENDANTS("descendants"),
         UUID("uuid"),
         FILE("file"),
-        FIELD("field"),
         CHILDREN("children"),
         ROOT("root");
         private String name;

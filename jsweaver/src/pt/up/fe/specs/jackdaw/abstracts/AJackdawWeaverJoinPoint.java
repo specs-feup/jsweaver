@@ -73,7 +73,7 @@ public abstract class AJackdawWeaverJoinPoint extends AJoinPoint {
     }
 
     @Override
-    public AJoinPoint ancestorImpl(String joinPointType) {
+    public AJoinPoint getAncestorImpl(String joinPointType) {
         AJoinPoint currentParent = getParentImpl();
         while (currentParent != null) {
             if (currentParent.instanceOf(joinPointType)) {
@@ -117,7 +117,7 @@ public abstract class AJackdawWeaverJoinPoint extends AJoinPoint {
     }
 
     @Override
-    public Object fieldImpl(String fieldName) {
+    public Object getFieldImpl(String fieldName) {
         JsonElement field = getNode().get(fieldName);
         if (field.isJsonObject() && field.getAsJsonObject().has("type")) {
             return JoinpointCreator.create(field.getAsJsonObject());
