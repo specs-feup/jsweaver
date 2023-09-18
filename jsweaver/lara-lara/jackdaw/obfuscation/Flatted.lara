@@ -17,7 +17,7 @@ function obfuscate($block){
 			//If function is an opaque predicate there is no need to refactor.
 			if(!isPredicate($block)){
 				$block.refactor(getUuid());
-				///var numberParams = $block.getField("params").length;
+				///var numberParams = $block.field("params").length;
 				//for(i=0;i<numberParams;i++){
 					//$block.refactorParam(i,getUuid());
 				//}
@@ -150,7 +150,7 @@ function transformSwitch($switch,entry,exit){
  	var switchVariable = levels[levels.length - 1].variable;
  	var bodyEntry = "'" + getUuid() + "'";
 
-	var cases = $switch.getField("cases");
+	var cases = $switch.field("cases");
 	result += "case " + entry + ":\n";
 	
 	result += "\tswitch("+$switch.discriminant.code + "){\n";
@@ -192,7 +192,7 @@ function transformWhile($while,entry,exit){
 
 	breaks.push({level:levels.length,entry:exit});
 	continues.push({level:levels.length,entry:exit});
-	var whileBody = $while.getField("body").children;
+	var whileBody = $while.field("body").children;
 	result += transformBlock($while,bodyEntry,entry);
 	breaks.pop();
 	continues.pop();
@@ -219,7 +219,7 @@ function transformDo($do,entry,exit){
 		
 	breaks.push({level:levels.length,entry:exit});
 	continues.push({level:levels.length,entry:exit});
-	var doBody = $do.getField("body");
+	var doBody = $do.field("body");
 	result += transformBlock(doBody,bodyEntry,testEntry);
 	breaks.pop();
 	continues.pop();
@@ -232,7 +232,7 @@ function transformIf($if,entry,exit){
 	var switchVariable = levels[levels.length - 1].variable;
 	var thenEntry = "'" + getUuid() + "'";
 	var elseEntry;
-	if($if.getField("alternate") == null){
+	if($if.field("alternate") == null){
 		elseEntry = exit;
 	}
 	else elseEntry = "'" + getUuid() + "'";
@@ -244,14 +244,14 @@ function transformIf($if,entry,exit){
 	result += "\t" + switchVariable + " = " + elseEntry + "\n";
 	result += "\tbreak\n";
 	
-	result += transformBlock($if.getField("consequent"),thenEntry,exit);
-	if($if.getField("alternate") == "null"){
+	result += transformBlock($if.field("consequent"),thenEntry,exit);
+	if($if.field("alternate") == "null"){
 		result += "case " + elseEntry + ":\n";
 		result += "\t" + switchVariable + " = " + exit + "\n";
 		result += "\tbreak\n";
 	}
 	else{
-		result += transformBlock($if.getField("alternate"),elseEntry,exit);
+		result += transformBlock($if.field("alternate"),elseEntry,exit);
 	}
 	return result;
 }
@@ -284,7 +284,7 @@ function transformFor($for,entry,exit){
 	
 	breaks.push({level:levels.length,entry:exit});
 	continues.push({level:levels.length,entry:exit});
-	result += transformBlock($for.getField("body"),bodyEntry,incEntry);
+	result += transformBlock($for.field("body"),bodyEntry,incEntry);
 	breaks.pop();
 	continues.pop();
 	
@@ -299,19 +299,19 @@ function transformTry($try,entry,exit){
 	result += "\tcase " + entry + ": \n";
 	
 	result += "\ttry{\n";
-	result += flattenBlock($try.getField("block"));
+	result += flattenBlock($try.field("block"));
 	result += "\t}\n";
 	
 	
-	result += "\tcatch(" + $try.getField("handler").getField("param").code + "){\n";
-	result += flattenBlock($try.getField("handler").getField("body"));
+	result += "\tcatch(" + $try.field("handler").field("param").code + "){\n";
+	result += flattenBlock($try.field("handler").field("body"));
 	result += "\t}\n";
 	
 	
 	//missing handler for finnally
-	if($try.getField("finalizer") != null){
+	if($try.field("finalizer") != null){
 		result += "\tfinally{\n";
-		result += flattenBlock($try.getField("finalizer"));
+		result += flattenBlock($try.field("finalizer"));
 		result += "\t}\n";
 	
 	}
@@ -331,11 +331,11 @@ function getUuid(){
 
 function getBlockParts($block){
 	var blockStatements;
-	if($block.type == "Program") blockStatements = $block.getField("body");
-	else if($block.type == "FunctionDeclaration") blockStatements = $block.getField("body").getField("body");
-	else if($block.type == "WhileStatement") blockStatements = $block.getField("body").children;
-	else if($block.type == "BlockStatement") blockStatements = $block.getField("body");
-	else if($block.type == "SwitchCase") blockStatements = $block.getField("consequent");
+	if($block.type == "Program") blockStatements = $block.field("body");
+	else if($block.type == "FunctionDeclaration") blockStatements = $block.field("body").field("body");
+	else if($block.type == "WhileStatement") blockStatements = $block.field("body").children;
+	else if($block.type == "BlockStatement") blockStatements = $block.field("body");
+	else if($block.type == "SwitchCase") blockStatements = $block.field("consequent");
 	
 	var sequence = {type:"Sequence",array:[]};
 	var blockParts = [];

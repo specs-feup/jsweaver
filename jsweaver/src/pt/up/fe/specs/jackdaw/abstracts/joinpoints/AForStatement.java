@@ -5,7 +5,6 @@ import java.util.Optional;
 import org.lara.interpreter.exception.AttributeException;
 import java.util.List;
 import org.lara.interpreter.weaver.interf.SelectOp;
-import pt.up.fe.specs.jackdaw.enums.LoopKind;
 import org.lara.interpreter.weaver.interf.JoinPoint;
 import java.util.stream.Collectors;
 import java.util.Arrays;
@@ -109,7 +108,7 @@ public abstract class AForStatement extends ALoop {
      * @return the attribute's value
      */
     @Override
-    public LoopKind getKindImpl() {
+    public String getKindImpl() {
         return this.aLoop.getKindImpl();
     }
 
@@ -177,21 +176,12 @@ public abstract class AForStatement extends ALoop {
     }
 
     /**
-     * Get value on attribute getAncestor
+     * Get value on attribute ancestor
      * @return the attribute's value
      */
     @Override
-    public AJoinPoint getAncestorImpl(String joinPointType) {
-        return this.aLoop.getAncestorImpl(joinPointType);
-    }
-
-    /**
-     * Get value on attribute getField
-     * @return the attribute's value
-     */
-    @Override
-    public Object getFieldImpl(String fieldName) {
-        return this.aLoop.getFieldImpl(fieldName);
+    public AJoinPoint ancestorImpl(String joinPointType) {
+        return this.aLoop.ancestorImpl(joinPointType);
     }
 
     /**
@@ -237,6 +227,15 @@ public abstract class AForStatement extends ALoop {
     @Override
     public AJoinPoint getFileImpl() {
         return this.aLoop.getFileImpl();
+    }
+
+    /**
+     * Get value on attribute field
+     * @return the attribute's value
+     */
+    @Override
+    public Object fieldImpl(String fieldName) {
+        return this.aLoop.fieldImpl(fieldName);
     }
 
     /**
@@ -376,13 +375,13 @@ public abstract class AForStatement extends ALoop {
         AST("ast"),
         CODE("code"),
         LINE("line"),
-        GETANCESTOR("getAncestor"),
-        GETFIELD("getField"),
+        ANCESTOR("ancestor"),
         COLUMN("column"),
         TYPE("type"),
         DESCENDANTS("descendants"),
         UUID("uuid"),
         FILE("file"),
+        FIELD("field"),
         CHILDREN("children"),
         ROOT("root");
         private String name;

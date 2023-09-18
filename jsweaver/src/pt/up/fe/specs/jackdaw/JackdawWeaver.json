@@ -9,6 +9,20 @@
 			"children": [
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -54,37 +68,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -176,6 +178,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -221,37 +237,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -343,6 +347,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -388,37 +406,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -483,6 +489,20 @@
 			"children": [
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -528,37 +548,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -638,6 +646,20 @@
 			"children": [
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -683,37 +705,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -805,6 +815,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -850,37 +874,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -954,6 +966,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -999,37 +1025,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -1099,6 +1113,20 @@
 			"children": [
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -1144,37 +1172,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -1262,6 +1278,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -1307,37 +1337,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -1407,6 +1425,20 @@
 			"children": [
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -1452,37 +1484,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -1556,6 +1576,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -1601,37 +1635,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -1719,6 +1741,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -1764,37 +1800,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -1914,6 +1938,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -1959,37 +1997,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -2059,6 +2085,20 @@
 			"children": [
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -2104,37 +2144,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -2208,6 +2236,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -2253,37 +2295,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -2386,6 +2416,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -2431,37 +2475,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -2585,6 +2617,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -2630,37 +2676,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -2784,6 +2818,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -2829,37 +2877,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -3007,6 +3043,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -3052,37 +3102,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -3161,6 +3199,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -3206,37 +3258,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -3324,6 +3364,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -3369,37 +3423,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -3483,6 +3525,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -3528,37 +3584,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -3650,6 +3694,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -3695,37 +3753,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -3817,6 +3863,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -3862,37 +3922,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -3993,6 +4041,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -4038,37 +4100,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -4139,6 +4189,20 @@
 			"children": [
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -4184,37 +4248,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -4285,6 +4337,20 @@
 			"children": [
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -4330,37 +4396,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -4545,6 +4599,20 @@
 			"children": [
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -4590,37 +4658,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -4704,6 +4760,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -4749,37 +4819,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -4858,6 +4916,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -4903,37 +4975,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -5008,6 +5068,20 @@
 			"children": [
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -5053,37 +5127,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -5148,6 +5210,20 @@
 			"children": [
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -5193,37 +5269,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -5330,6 +5394,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -5375,37 +5453,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{
@@ -5506,6 +5572,20 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the first ancestor of the given type",
+						"children": [
+									{
+										"type": "joinpoint",
+										"name": "ancestor"
+									},
+									{
+										"type": "String",
+										"name": "joinPointType",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "The ast corresponding to this join point",
 						"children": [
 									{
@@ -5551,37 +5631,25 @@
 					},
 					{
 						"type": "attribute",
+						"tooltip": "Returns the value of the given field",
+						"children": [
+									{
+										"type": "Object",
+										"name": "field"
+									},
+									{
+										"type": "String",
+										"name": "fieldName",
+										"defaultValue": ""
+									}]
+					},
+					{
+						"type": "attribute",
 						"tooltip": "Returns the 'file' joinpoint",
 						"children": [
 									{
 										"type": "joinpoint",
 										"name": "file"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the first ancestor of the given type",
-						"children": [
-									{
-										"type": "joinpoint",
-										"name": "getAncestor"
-									},
-									{
-										"type": "String",
-										"name": "joinPointType"
-									}]
-					},
-					{
-						"type": "attribute",
-						"tooltip": "Returns the value of the given field",
-						"children": [
-									{
-										"type": "Object",
-										"name": "getField"
-									},
-									{
-										"type": "String",
-										"name": "fieldName"
 									}]
 					},
 					{

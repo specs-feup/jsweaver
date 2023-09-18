@@ -81,13 +81,13 @@ public abstract class AContinueStatement extends AJackdawWeaverJoinPoint {
         AST("ast"),
         CODE("code"),
         LINE("line"),
-        GETANCESTOR("getAncestor"),
-        GETFIELD("getField"),
+        ANCESTOR("ancestor"),
         COLUMN("column"),
         TYPE("type"),
         DESCENDANTS("descendants"),
         UUID("uuid"),
         FILE("file"),
+        FIELD("field"),
         CHILDREN("children"),
         ROOT("root");
         private String name;

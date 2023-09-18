@@ -45,8 +45,8 @@ public class JsForStatement extends AForStatement {
 	}
 
 	@Override
-	public LoopKind getKindImpl() {
-		return LoopKind.FOR;
+	public String getKindImpl() {
+		return LoopKind.FOR.getString();
 	}
 
 }

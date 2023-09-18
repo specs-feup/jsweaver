@@ -1,6 +1,5 @@
 package pt.up.fe.specs.jackdaw.abstracts.joinpoints;
 
-import pt.up.fe.specs.jackdaw.enums.LoopKind;
 import org.lara.interpreter.weaver.interf.events.Stage;
 import java.util.Optional;
 import org.lara.interpreter.exception.AttributeException;
@@ -22,7 +21,7 @@ public abstract class ALoop extends AJackdawWeaverJoinPoint {
     /**
      * The kind of the loop
      */
-    public abstract LoopKind getKindImpl();
+    public abstract String getKindImpl();
 
     /**
      * The kind of the loop
@@ -32,7 +31,7 @@ public abstract class ALoop extends AJackdawWeaverJoinPoint {
         	if(hasListeners()) {
         		eventTrigger().triggerAttribute(Stage.BEGIN, this, "kind", Optional.empty());
         	}
-        	LoopKind result = this.getKindImpl();
+        	String result = this.getKindImpl();
         	if(hasListeners()) {
         		eventTrigger().triggerAttribute(Stage.END, this, "kind", Optional.ofNullable(result));
         	}
@@ -159,13 +158,13 @@ public abstract class ALoop extends AJackdawWeaverJoinPoint {
         AST("ast"),
         CODE("code"),
         LINE("line"),
-        GETANCESTOR("getAncestor"),
-        GETFIELD("getField"),
+        ANCESTOR("ancestor"),
         COLUMN("column"),
         TYPE("type"),
         DESCENDANTS("descendants"),
         UUID("uuid"),
         FILE("file"),
+        FIELD("field"),
         CHILDREN("children"),
         ROOT("root");
         private String name;

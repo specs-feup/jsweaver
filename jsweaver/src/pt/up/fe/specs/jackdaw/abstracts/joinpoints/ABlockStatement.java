@@ -96,21 +96,12 @@ public abstract class ABlockStatement extends AStatement {
     }
 
     /**
-     * Get value on attribute getAncestor
+     * Get value on attribute ancestor
      * @return the attribute's value
      */
     @Override
-    public AJoinPoint getAncestorImpl(String joinPointType) {
-        return this.aStatement.getAncestorImpl(joinPointType);
-    }
-
-    /**
-     * Get value on attribute getField
-     * @return the attribute's value
-     */
-    @Override
-    public Object getFieldImpl(String fieldName) {
-        return this.aStatement.getFieldImpl(fieldName);
+    public AJoinPoint ancestorImpl(String joinPointType) {
+        return this.aStatement.ancestorImpl(joinPointType);
     }
 
     /**
@@ -156,6 +147,15 @@ public abstract class ABlockStatement extends AStatement {
     @Override
     public AJoinPoint getFileImpl() {
         return this.aStatement.getFileImpl();
+    }
+
+    /**
+     * Get value on attribute field
+     * @return the attribute's value
+     */
+    @Override
+    public Object fieldImpl(String fieldName) {
+        return this.aStatement.fieldImpl(fieldName);
     }
 
     /**
@@ -292,13 +292,13 @@ public abstract class ABlockStatement extends AStatement {
         AST("ast"),
         CODE("code"),
         LINE("line"),
-        GETANCESTOR("getAncestor"),
-        GETFIELD("getField"),
+        ANCESTOR("ancestor"),
         COLUMN("column"),
         TYPE("type"),
         DESCENDANTS("descendants"),
         UUID("uuid"),
         FILE("file"),
+        FIELD("field"),
         CHILDREN("children"),
         ROOT("root");
         private String name;

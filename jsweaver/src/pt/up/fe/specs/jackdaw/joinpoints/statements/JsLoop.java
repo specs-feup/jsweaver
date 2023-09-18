@@ -30,7 +30,7 @@ public class JsLoop extends ALoop {
     }
 
     @Override
-    public LoopKind getKindImpl() {
+    public String getKindImpl() {
         throw new NotImplementedException(this);
     }
 

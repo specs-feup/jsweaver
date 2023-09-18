@@ -66,9 +66,9 @@ public abstract class AJoinPoint extends JoinPoint {
         attributes.add("root");
         attributes.add("file");
         attributes.add("parent");
-        attributes.add("getAncestor(String joinPointType)");
+        attributes.add("ancestor(String joinPointType)");
         attributes.add("type");
-        attributes.add("getField(String fieldName)");
+        attributes.add("field(String fieldName)");
         attributes.add("joinPointName");
         attributes.add("ast");
         attributes.add("children");
@@ -153,25 +153,25 @@ public abstract class AJoinPoint extends JoinPoint {
      * @param joinPointType
      * @return 
      */
-    public abstract AJoinPoint getAncestorImpl(String joinPointType);
+    public abstract AJoinPoint ancestorImpl(String joinPointType);
 
     /**
      * 
      * @param joinPointType
      * @return 
      */
-    public final Object getAncestor(String joinPointType) {
+    public final Object ancestor(String joinPointType) {
         try {
         	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "getAncestor", Optional.empty(), joinPointType);
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "ancestor", Optional.empty(), joinPointType);
         	}
-        	AJoinPoint result = this.getAncestorImpl(joinPointType);
+        	AJoinPoint result = this.ancestorImpl(joinPointType);
         	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.END, this, "getAncestor", Optional.ofNullable(result), joinPointType);
+        		eventTrigger().triggerAttribute(Stage.END, this, "ancestor", Optional.ofNullable(result), joinPointType);
         	}
         	return result!=null?result:getUndefinedValue();
         } catch(Exception e) {
-        	throw new AttributeException(get_class(), "getAncestor", e);
+        	throw new AttributeException(get_class(), "ancestor", e);
         }
     }
 
@@ -203,25 +203,25 @@ public abstract class AJoinPoint extends JoinPoint {
      * @param fieldName
      * @return 
      */
-    public abstract Object getFieldImpl(String fieldName);
+    public abstract Object fieldImpl(String fieldName);
 
     /**
      * 
      * @param fieldName
      * @return 
      */
-    public final Object getField(String fieldName) {
+    public final Object field(String fieldName) {
         try {
         	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "getField", Optional.empty(), fieldName);
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "field", Optional.empty(), fieldName);
         	}
-        	Object result = this.getFieldImpl(fieldName);
+        	Object result = this.fieldImpl(fieldName);
         	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.END, this, "getField", Optional.ofNullable(result), fieldName);
+        		eventTrigger().triggerAttribute(Stage.END, this, "field", Optional.ofNullable(result), fieldName);
         	}
         	return result!=null?result:getUndefinedValue();
         } catch(Exception e) {
-        	throw new AttributeException(get_class(), "getField", e);
+        	throw new AttributeException(get_class(), "field", e);
         }
     }
 

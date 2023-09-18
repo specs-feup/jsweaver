@@ -150,21 +150,12 @@ public abstract class ACallExpression extends AExpression {
     }
 
     /**
-     * Get value on attribute getAncestor
+     * Get value on attribute ancestor
      * @return the attribute's value
      */
     @Override
-    public AJoinPoint getAncestorImpl(String joinPointType) {
-        return this.aExpression.getAncestorImpl(joinPointType);
-    }
-
-    /**
-     * Get value on attribute getField
-     * @return the attribute's value
-     */
-    @Override
-    public Object getFieldImpl(String fieldName) {
-        return this.aExpression.getFieldImpl(fieldName);
+    public AJoinPoint ancestorImpl(String joinPointType) {
+        return this.aExpression.ancestorImpl(joinPointType);
     }
 
     /**
@@ -210,6 +201,15 @@ public abstract class ACallExpression extends AExpression {
     @Override
     public AJoinPoint getFileImpl() {
         return this.aExpression.getFileImpl();
+    }
+
+    /**
+     * Get value on attribute field
+     * @return the attribute's value
+     */
+    @Override
+    public Object fieldImpl(String fieldName) {
+        return this.aExpression.fieldImpl(fieldName);
     }
 
     /**
@@ -342,13 +342,13 @@ public abstract class ACallExpression extends AExpression {
         AST("ast"),
         CODE("code"),
         LINE("line"),
-        GETANCESTOR("getAncestor"),
-        GETFIELD("getField"),
+        ANCESTOR("ancestor"),
         COLUMN("column"),
         TYPE("type"),
         DESCENDANTS("descendants"),
         UUID("uuid"),
         FILE("file"),
+        FIELD("field"),
         CHILDREN("children"),
         ROOT("root");
         private String name;
