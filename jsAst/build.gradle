@@ -1,5 +1,5 @@
 plugins {
- 	id 'distribution'
+    id 'distribution'
 }
 
 // Java project
@@ -17,25 +17,30 @@ repositories {
 }
 
 dependencies {
-	implementation "junit:junit:4.11"     
-	
-	implementation ':JsEngine'
-	implementation ':SpecsUtils'
+    implementation "junit:junit:4.11"
 
-	implementation group: 'com.google.code.gson', name: 'gson', version: '2.4'		
+    implementation ':JsEngine'
+    implementation ':SpecsUtils'
+
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.4'
 }
 
 java {
-	withSourcesJar()
+    withSourcesJar()
 }
 
 // Project sources
 sourceSets {
-   main {
-      java {
-         srcDir 'src'
-      }
-	  
-   }
-	
+    main {
+        java {
+            srcDir 'src'
+        }
+
+        resources {
+            srcDir 'resources'
+        }
+
+    }
+    
+
 }
