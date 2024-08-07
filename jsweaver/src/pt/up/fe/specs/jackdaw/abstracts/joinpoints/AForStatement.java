@@ -5,7 +5,6 @@ import java.util.Optional;
 import org.lara.interpreter.exception.AttributeException;
 import java.util.List;
 import org.lara.interpreter.weaver.interf.SelectOp;
-import pt.up.fe.specs.jackdaw.enums.LoopKind;
 import org.lara.interpreter.weaver.interf.JoinPoint;
 import java.util.stream.Collectors;
 import java.util.Arrays;
@@ -109,7 +108,7 @@ public abstract class AForStatement extends ALoop {
      * @return the attribute's value
      */
     @Override
-    public LoopKind getKindImpl() {
+    public String getKindImpl() {
         return this.aLoop.getKindImpl();
     }
 

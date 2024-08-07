@@ -1,0 +1,4 @@
+rootProject.name = 'jsAst'
+
+includeBuild("../../specs-java-libs/JsEngine")
+includeBuild("../../specs-java-libs/SpecsUtils")

@@ -1,0 +1,15 @@
+rootProject.name = 'jsweaver'
+
+includeBuild("../../specs-java-libs/jOptions")
+includeBuild("../../specs-java-libs/JsEngine")
+includeBuild("../../specs-java-libs/SpecsUtils")
+
+includeBuild("../../lara-framework/LanguageSpecification")
+includeBuild("../../lara-framework/LaraCommonLanguageApi")
+includeBuild("../../lara-framework/LaraDoc")
+includeBuild("../../lara-framework/LaraFramework")
+includeBuild("../../lara-framework/LARAI")
+includeBuild("../../lara-framework/LaraUtils")
+includeBuild("../../lara-framework/WeaverInterface")
+
+includeBuild("../../jsweaver/jsAst")

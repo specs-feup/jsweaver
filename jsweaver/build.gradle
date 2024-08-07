@@ -1,0 +1,81 @@
+plugins {
+ 	id 'distribution'
+}
+
+// Java project
+apply plugin: 'java'
+
+// Executable
+apply plugin: 'application'
+
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+
+// Repositories providers
+repositories {
+	// Gearman
+	maven { url "https://oss.sonatype.org/content/repositories/snapshots"}
+
+    mavenCentral()
+}
+dependencies {
+	implementation "junit:junit:4.11"     
+
+
+	implementation ':jOptions'
+	implementation ':JsEngine'
+	implementation ':SpecsUtils'
+
+	implementation ':LanguageSpecification'
+	implementation ':LaraCommonLanguageApi'
+	implementation ':LaraDoc'
+	implementation ':LaraFramework'
+	implementation ':LARAI'
+	implementation ':LaraUtils'
+	implementation ':WeaverInterface'
+
+	implementation ':jsAst'
+
+	implementation group: 'com.google.code.gson', name: 'gson', version: '2.4'		
+	implementation group: 'com.sun.xml.bind', name: 'jaxb-core', version: '2.3.0.1'		
+}
+
+java {
+	withSourcesJar()
+}
+
+// Project sources
+sourceSets {
+   main {
+      java {
+         srcDir 'src'
+      }
+	  
+	  resources {
+         srcDir 'lara-lara'	  
+         srcDir 'lara-jackdaw'	  
+         srcDir 'resources'	  
+	  }
+   }
+	
+   test {
+      java {
+         srcDir 'test'
+      }
+	  
+	  resources {
+         srcDir 'lara-lara'	  
+         srcDir 'lara-jackdaw'	  
+         srcDir 'resources'	   
+	  }
+   }   
+}
+
+application {
+    mainClass.set("pt.up.fe.specs.jackdaw.JackdawLauncher")
+}
+

@@ -26,8 +26,8 @@ public class JsWhileStatement extends AWhileStatement {
 	}
 
 	@Override
-	public LoopKind getKindImpl() {
-		return LoopKind.WHILE;
+	public String getKindImpl() {
+		return LoopKind.WHILE.getName();
 	}
 
 }

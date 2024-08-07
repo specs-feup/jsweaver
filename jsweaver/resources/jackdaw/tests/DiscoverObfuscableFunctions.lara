@@ -1,4 +1,4 @@
-import weaver.WeaverJps;
+import weaver.Query;
 import jackdaw.Jackdaw;
 import obfuscation.Flatted;
 import obfuscation.OpaquePredicates;
