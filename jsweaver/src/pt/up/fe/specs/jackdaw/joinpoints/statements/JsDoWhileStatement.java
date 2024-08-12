@@ -26,8 +26,8 @@ public class JsDoWhileStatement extends ADoWhileStatement {
 	}
 
 	@Override
-	public LoopKind getKindImpl() {
-		return LoopKind.DO;
+	public String getKindImpl() {
+		return LoopKind.DO.getName();
 	}
 
 

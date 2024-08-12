@@ -1,4 +1,8 @@
-bin/
+**/bin/**
+
+### Gradle
+**/.gradle/**
+**/build/**
 
 ### Default folder for executing applications
 **/run/**

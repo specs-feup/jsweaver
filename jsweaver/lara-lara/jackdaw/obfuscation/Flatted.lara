@@ -1,5 +1,5 @@
 import lara.Strings;
-import weaver.WeaverJps;
+import weaver.Query;
 
 
 
@@ -385,7 +385,7 @@ function getBlockParts($block){
 
 function outputDeclarations($block){
 	var declarations = "";
-	for(var $dec of WeaverJps.searchFrom($block, 'declaration').get()) {
+	for(var $dec of Query.searchFrom($block, 'declaration').get()) {
 		for(var a of $dec.children){
 			if(a.type == "VariableDeclarator"){
 				a.refactor(getUuid());

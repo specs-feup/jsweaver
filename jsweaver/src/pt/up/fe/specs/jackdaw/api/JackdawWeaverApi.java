@@ -24,8 +24,8 @@ public enum JackdawWeaverApi implements LaraResourceProvider {
 	
 	JACKDAW_CLASS_JP("jp/JackdawClassJp.lara"),
     JACKDAW_JOIN_POINT("jp/JackdawJoinPoint.lara"),
-    COMMON_JOIN_POINTS("jp/CommonJoinPoints.lara"),
-	JOINPOINTS("JoinPoints.lara");
+    COMMON_JOIN_POINTS("jp/CommonJoinPoints.lara");
+	//JOINPOINTS("JoinPoints.lara");
 
 	private final String resource;
 
