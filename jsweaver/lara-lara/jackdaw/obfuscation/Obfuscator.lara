@@ -1,5 +1,5 @@
 import lara.Strings;
-import weaver.WeaverJps;
+import weaver.Query;
 import obfuscation.Flatted;
 import obfuscation.OpaquePredicates;
 
@@ -11,7 +11,7 @@ function obfuscateFile($file){
 	
 	
 	//Obfuscating all functions in the file.
-	var functions = WeaverJps.searchFrom($file, 'functionDeclaration').get();
+	var functions = Query.searchFrom($file, 'functionDeclaration').get();
 	for(var $f of functions){
 	
 		var p =  $f.parent;
@@ -34,7 +34,7 @@ function applyObfuscationDebug($file){
 	var numberOfPredicates = getRandomInt(3, 6);
 	addOpaquePredicates($file,numberOfPredicates);
 	//Obfuscating all functions in the file.
-	var functions = WeaverJps.searchFrom($file, 'functionDeclaration').get();
+	var functions = Query.searchFrom($file, 'functionDeclaration').get();
 	for(var $f of functions){
 		var d = new Date();
 		var t = d.getTime();
@@ -51,7 +51,7 @@ function applyCustomObfuscation($file,configuration){
 	// Adding opaque predicates.
 	var numberOfPredicates = getRandomInt(configuration.predicates.min, configuration.predicates.max);
 	addOpaquePredicates($file,numberOfPredicates);
-	var functions = WeaverJps.searchFrom($file, 'functionDeclaration').get();
+	var functions = Query.searchFrom($file, 'functionDeclaration').get();
 	for(var $f of functions){
 		if(functionInConfiguration($f,configuration)){
 			println("Obfuscating -> " + $f.name);
@@ -71,7 +71,7 @@ function discoverObfuscableFunctions($file,excludedFunctions){
 		var numberOfPredicates = getRandomInt(3, 6);
 		addOpaquePredicates($file,numberOfPredicates);
 		var configFunctions = [];
-		var functions = WeaverJps.searchFrom($file, 'functionDeclaration').get();
+		var functions = Query.searchFrom($file, 'functionDeclaration').get();
 		for(var i=0;i<functions.length;i++){
 			var $f = functions[i];
 			var nonObfuscatedName = $f.name;
@@ -140,7 +140,7 @@ function discoverObfuscableFunctions($file,excludedFunctions){
 		for(functionName of functionNames){
 			println("[EVENT] Obfuscating function -> " + functionName );
 			
-			var functions = WeaverJps.searchFrom($file, 'functionDeclaration', {'name': functionName}).get();
+			var functions = Query.searchFrom($file, 'functionDeclaration', {'name': functionName}).get();
 			var $function = functions[0];
 			var previousCode = $file.code;
 
@@ -203,7 +203,7 @@ function discoverObfuscableFunctions($file,excludedFunctions){
  }
  
  function getFunctionNames($file){
- 	var functions = WeaverJps.searchFrom($file, 'functionDeclaration').get();
+ 	var functions = Query.searchFrom($file, 'functionDeclaration').get();
 	var functionNames = [];
 	for(var i=0;i<functions.length;i++){
 	   functionNames.push(functions[i].name);

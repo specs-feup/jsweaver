@@ -7,7 +7,7 @@ aspectdef OpaquePred
 		
 		var test = $while.test;
 		var newWhile = "while(" + "(" + $while.test.code + ")&&(" + pred.id+"()))\n";
-		var body = WeaverJps.searchFrom($while, 'blockStatement').get();
+		var body = Query.searchFrom($while, 'blockStatement').get();
 		
 		for($c of body){
 			newWhile += ($c.code);
