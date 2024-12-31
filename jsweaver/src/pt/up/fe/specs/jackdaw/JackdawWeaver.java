@@ -1,26 +1,16 @@
 package pt.up.fe.specs.jackdaw;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collectors;
-
-import javax.script.ScriptException;
-
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import org.lara.interpreter.joptions.config.interpreter.LaraiKeys;
 import org.lara.interpreter.weaver.ast.AstMethods;
 import org.lara.interpreter.weaver.interf.AGear;
 import org.lara.interpreter.weaver.interf.JoinPoint;
 import org.lara.interpreter.weaver.options.WeaverOption;
-import org.lara.language.specification.LanguageSpecification;
+import org.lara.language.specification.dsl.LanguageSpecificationV2;
 import org.suikasoft.jOptions.Interfaces.DataStore;
 import org.suikasoft.jOptions.storedefinition.StoreDefinition;
 import org.suikasoft.jOptions.storedefinition.StoreDefinitionBuilder;
-
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-
 import pt.up.fe.specs.jackdaw.abstracts.AJackdawWeaverJoinPoint;
 import pt.up.fe.specs.jackdaw.abstracts.weaver.AJackdawWeaver;
 import pt.up.fe.specs.jackdaw.api.JackdawLaraApi;
@@ -34,20 +24,27 @@ import pt.up.fe.specs.util.SpecsIo;
 import pt.up.fe.specs.util.lazy.Lazy;
 import pt.up.fe.specs.util.providers.ResourceProvider;
 
+import javax.script.ScriptException;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * Weaver Implementation for JackdawWeaver<br>
  * Since the generated abstract classes are always overwritten, their implementation should be done by extending those
  * abstract classes with user-defined classes.<br>
  * The abstract class {@link pt.up.fe.specs.jackdaw.abstracts.AJackdawWeaverJoinPoint} can be used to add user-defined
  * methods and fields which the user intends to add for all join points and are not intended to be used in LARA aspects.
- * 
+ *
  * @author Lara Weaver Generator
  */
 public class JackdawWeaver extends AJackdawWeaver {
 
-    public static LanguageSpecification getLanguageSpec() {
-        return LanguageSpecification.newInstance(() -> "jackdaw/specs/joinPointModel.xml",
-                () -> "jackdaw/specs/artifacts.xml", () -> "jackdaw/specs/actionModel.xml", true);
+    public static LanguageSpecificationV2 getLanguageSpec() {
+        return LanguageSpecificationV2.newInstance(() -> "jackdaw/specs/joinPointModel.xml",
+                () -> "jackdaw/specs/artifacts.xml", () -> "jackdaw/specs/actionModel.xml");
     }
 
     /**
@@ -70,7 +67,7 @@ public class JackdawWeaver extends AJackdawWeaver {
 
     /**
      * Warns the lara interpreter if the weaver accepts a folder as the application or only one file at a time.
-     * 
+     *
      * @return true if the weaver is able to work with several files, false if only works with one file
      */
     @Override
@@ -81,13 +78,10 @@ public class JackdawWeaver extends AJackdawWeaver {
 
     /**
      * Set a file/folder in the weaver if it is valid file/folder type for the weaver.
-     * 
-     * @param source
-     *            the file with the source code
-     * @param outputDir
-     *            output directory for the generated file(s)
-     * @param args
-     *            arguments to start the weaver
+     *
+     * @param source    the file with the source code
+     * @param outputDir output directory for the generated file(s)
+     * @param args      arguments to start the weaver
      * @return true if the file type is valid
      */
     @Override
@@ -154,7 +148,7 @@ public class JackdawWeaver extends AJackdawWeaver {
 
     /**
      * Return a JoinPoint instance of the language root, i.e., an instance of AProject
-     * 
+     *
      * @return an instance of the join point root/program
      */
     @Override
@@ -168,7 +162,7 @@ public class JackdawWeaver extends AJackdawWeaver {
 
     /**
      * Closes the weaver to the specified output directory location, if the weaver generates new file(s)
-     * 
+     *
      * @return if close was successful
      */
     @Override
@@ -192,7 +186,7 @@ public class JackdawWeaver extends AJackdawWeaver {
 
     /**
      * Returns a list of Gears associated to this weaver engine
-     * 
+     *
      * @return a list of implementations of {@link AGear} or null if no gears are available
      */
     @Override
@@ -217,8 +211,9 @@ public class JackdawWeaver extends AJackdawWeaver {
                 .collect(Collectors.toList());
     }
 
+
     @Override
-    public LanguageSpecification getLanguageSpecification() {
+    protected LanguageSpecificationV2 buildLangSpecs() {
         return getLanguageSpec();
     }
 
