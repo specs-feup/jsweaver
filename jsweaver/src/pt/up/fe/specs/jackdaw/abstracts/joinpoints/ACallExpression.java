@@ -26,52 +26,6 @@ public abstract class ACallExpression extends AExpression {
         this.aExpression = aExpression;
     }
     /**
-     * Name of the callee or callee type.
-     */
-    public abstract String getNameImpl();
-
-    /**
-     * Name of the callee or callee type.
-     */
-    public final Object getName() {
-        try {
-        	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "name", Optional.empty());
-        	}
-        	String result = this.getNameImpl();
-        	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.END, this, "name", Optional.ofNullable(result));
-        	}
-        	return result!=null?result:getUndefinedValue();
-        } catch(Exception e) {
-        	throw new AttributeException(get_class(), "name", e);
-        }
-    }
-
-    /**
-     * Identifier of this expression call.
-     */
-    public abstract AJoinPoint getCalleeImpl();
-
-    /**
-     * Identifier of this expression call.
-     */
-    public final Object getCallee() {
-        try {
-        	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "callee", Optional.empty());
-        	}
-        	AJoinPoint result = this.getCalleeImpl();
-        	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.END, this, "callee", Optional.ofNullable(result));
-        	}
-        	return result!=null?result:getUndefinedValue();
-        } catch(Exception e) {
-        	throw new AttributeException(get_class(), "callee", e);
-        }
-    }
-
-    /**
      * Get value on attribute arguments
      * @return the attribute's value
      */
@@ -105,48 +59,49 @@ public abstract class ACallExpression extends AExpression {
     }
 
     /**
-     * Get value on attribute parent
-     * @return the attribute's value
+     * Identifier of this expression call.
      */
-    @Override
-    public AJoinPoint getParentImpl() {
-        return this.aExpression.getParentImpl();
+    public abstract AJoinPoint getCalleeImpl();
+
+    /**
+     * Identifier of this expression call.
+     */
+    public final Object getCallee() {
+        try {
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "callee", Optional.empty());
+        	}
+        	AJoinPoint result = this.getCalleeImpl();
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.END, this, "callee", Optional.ofNullable(result));
+        	}
+        	return result!=null?result:getUndefinedValue();
+        } catch(Exception e) {
+        	throw new AttributeException(get_class(), "callee", e);
+        }
     }
 
     /**
-     * Get value on attribute joinPointName
-     * @return the attribute's value
+     * Name of the callee or callee type.
      */
-    @Override
-    public String getJoinPointNameImpl() {
-        return this.aExpression.getJoinPointNameImpl();
-    }
+    public abstract String getNameImpl();
 
     /**
-     * Get value on attribute ast
-     * @return the attribute's value
+     * Name of the callee or callee type.
      */
-    @Override
-    public String getAstImpl() {
-        return this.aExpression.getAstImpl();
-    }
-
-    /**
-     * Get value on attribute code
-     * @return the attribute's value
-     */
-    @Override
-    public String getCodeImpl() {
-        return this.aExpression.getCodeImpl();
-    }
-
-    /**
-     * Get value on attribute line
-     * @return the attribute's value
-     */
-    @Override
-    public Integer getLineImpl() {
-        return this.aExpression.getLineImpl();
+    public final Object getName() {
+        try {
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "name", Optional.empty());
+        	}
+        	String result = this.getNameImpl();
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.END, this, "name", Optional.ofNullable(result));
+        	}
+        	return result!=null?result:getUndefinedValue();
+        } catch(Exception e) {
+        	throw new AttributeException(get_class(), "name", e);
+        }
     }
 
     /**
@@ -159,57 +114,12 @@ public abstract class ACallExpression extends AExpression {
     }
 
     /**
-     * Get value on attribute column
+     * Get value on attribute ast
      * @return the attribute's value
      */
     @Override
-    public Integer getColumnImpl() {
-        return this.aExpression.getColumnImpl();
-    }
-
-    /**
-     * Get value on attribute type
-     * @return the attribute's value
-     */
-    @Override
-    public String getTypeImpl() {
-        return this.aExpression.getTypeImpl();
-    }
-
-    /**
-     * Get value on attribute descendantsArrayImpl
-     * @return the attribute's value
-     */
-    @Override
-    public AJoinPoint[] getDescendantsArrayImpl() {
-        return this.aExpression.getDescendantsArrayImpl();
-    }
-
-    /**
-     * Get value on attribute uuid
-     * @return the attribute's value
-     */
-    @Override
-    public String getUuidImpl() {
-        return this.aExpression.getUuidImpl();
-    }
-
-    /**
-     * Get value on attribute file
-     * @return the attribute's value
-     */
-    @Override
-    public AJoinPoint getFileImpl() {
-        return this.aExpression.getFileImpl();
-    }
-
-    /**
-     * Get value on attribute field
-     * @return the attribute's value
-     */
-    @Override
-    public Object fieldImpl(String fieldName) {
-        return this.aExpression.fieldImpl(fieldName);
+    public String getAstImpl() {
+        return this.aExpression.getAstImpl();
     }
 
     /**
@@ -222,12 +132,102 @@ public abstract class ACallExpression extends AExpression {
     }
 
     /**
+     * Get value on attribute code
+     * @return the attribute's value
+     */
+    @Override
+    public String getCodeImpl() {
+        return this.aExpression.getCodeImpl();
+    }
+
+    /**
+     * Get value on attribute column
+     * @return the attribute's value
+     */
+    @Override
+    public Integer getColumnImpl() {
+        return this.aExpression.getColumnImpl();
+    }
+
+    /**
+     * Get value on attribute descendantsArrayImpl
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint[] getDescendantsArrayImpl() {
+        return this.aExpression.getDescendantsArrayImpl();
+    }
+
+    /**
+     * Get value on attribute field
+     * @return the attribute's value
+     */
+    @Override
+    public Object fieldImpl(String fieldName) {
+        return this.aExpression.fieldImpl(fieldName);
+    }
+
+    /**
+     * Get value on attribute file
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint getFileImpl() {
+        return this.aExpression.getFileImpl();
+    }
+
+    /**
+     * Get value on attribute joinPointName
+     * @return the attribute's value
+     */
+    @Override
+    public String getJoinPointNameImpl() {
+        return this.aExpression.getJoinPointNameImpl();
+    }
+
+    /**
+     * Get value on attribute line
+     * @return the attribute's value
+     */
+    @Override
+    public Integer getLineImpl() {
+        return this.aExpression.getLineImpl();
+    }
+
+    /**
+     * Get value on attribute parent
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint getParentImpl() {
+        return this.aExpression.getParentImpl();
+    }
+
+    /**
      * Get value on attribute root
      * @return the attribute's value
      */
     @Override
     public AJoinPoint getRootImpl() {
         return this.aExpression.getRootImpl();
+    }
+
+    /**
+     * Get value on attribute type
+     * @return the attribute's value
+     */
+    @Override
+    public String getTypeImpl() {
+        return this.aExpression.getTypeImpl();
+    }
+
+    /**
+     * Get value on attribute uuid
+     * @return the attribute's value
+     */
+    @Override
+    public String getUuidImpl() {
+        return this.aExpression.getUuidImpl();
     }
 
     /**
@@ -288,9 +288,9 @@ public abstract class ACallExpression extends AExpression {
     @Override
     protected final void fillWithAttributes(List<String> attributes) {
         this.aExpression.fillWithAttributes(attributes);
-        attributes.add("name");
-        attributes.add("callee");
         attributes.add("arguments");
+        attributes.add("callee");
+        attributes.add("name");
     }
 
     /**
@@ -334,23 +334,23 @@ public abstract class ACallExpression extends AExpression {
      * 
      */
     protected enum CallExpressionAttributes {
-        NAME("name"),
-        CALLEE("callee"),
         ARGUMENTS("arguments"),
-        PARENT("parent"),
-        JOINPOINTNAME("joinPointName"),
-        AST("ast"),
-        CODE("code"),
-        LINE("line"),
+        CALLEE("callee"),
+        NAME("name"),
         ANCESTOR("ancestor"),
-        COLUMN("column"),
-        TYPE("type"),
-        DESCENDANTS("descendants"),
-        UUID("uuid"),
-        FILE("file"),
-        FIELD("field"),
+        AST("ast"),
         CHILDREN("children"),
-        ROOT("root");
+        CODE("code"),
+        COLUMN("column"),
+        DESCENDANTS("descendants"),
+        FIELD("field"),
+        FILE("file"),
+        JOINPOINTNAME("joinPointName"),
+        LINE("line"),
+        PARENT("parent"),
+        ROOT("root"),
+        TYPE("type"),
+        UUID("uuid");
         private String name;
 
         /**

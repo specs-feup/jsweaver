@@ -95,21 +95,12 @@ public abstract class AMemberExpression extends AExpression {
     }
 
     /**
-     * Get value on attribute parent
+     * Get value on attribute ancestor
      * @return the attribute's value
      */
     @Override
-    public AJoinPoint getParentImpl() {
-        return this.aExpression.getParentImpl();
-    }
-
-    /**
-     * Get value on attribute joinPointName
-     * @return the attribute's value
-     */
-    @Override
-    public String getJoinPointNameImpl() {
-        return this.aExpression.getJoinPointNameImpl();
+    public AJoinPoint ancestorImpl(String joinPointType) {
+        return this.aExpression.ancestorImpl(joinPointType);
     }
 
     /**
@@ -122,30 +113,21 @@ public abstract class AMemberExpression extends AExpression {
     }
 
     /**
+     * Get value on attribute childrenArrayImpl
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint[] getChildrenArrayImpl() {
+        return this.aExpression.getChildrenArrayImpl();
+    }
+
+    /**
      * Get value on attribute code
      * @return the attribute's value
      */
     @Override
     public String getCodeImpl() {
         return this.aExpression.getCodeImpl();
-    }
-
-    /**
-     * Get value on attribute line
-     * @return the attribute's value
-     */
-    @Override
-    public Integer getLineImpl() {
-        return this.aExpression.getLineImpl();
-    }
-
-    /**
-     * Get value on attribute ancestor
-     * @return the attribute's value
-     */
-    @Override
-    public AJoinPoint ancestorImpl(String joinPointType) {
-        return this.aExpression.ancestorImpl(joinPointType);
     }
 
     /**
@@ -158,39 +140,12 @@ public abstract class AMemberExpression extends AExpression {
     }
 
     /**
-     * Get value on attribute type
-     * @return the attribute's value
-     */
-    @Override
-    public String getTypeImpl() {
-        return this.aExpression.getTypeImpl();
-    }
-
-    /**
      * Get value on attribute descendantsArrayImpl
      * @return the attribute's value
      */
     @Override
     public AJoinPoint[] getDescendantsArrayImpl() {
         return this.aExpression.getDescendantsArrayImpl();
-    }
-
-    /**
-     * Get value on attribute uuid
-     * @return the attribute's value
-     */
-    @Override
-    public String getUuidImpl() {
-        return this.aExpression.getUuidImpl();
-    }
-
-    /**
-     * Get value on attribute file
-     * @return the attribute's value
-     */
-    @Override
-    public AJoinPoint getFileImpl() {
-        return this.aExpression.getFileImpl();
     }
 
     /**
@@ -203,12 +158,39 @@ public abstract class AMemberExpression extends AExpression {
     }
 
     /**
-     * Get value on attribute childrenArrayImpl
+     * Get value on attribute file
      * @return the attribute's value
      */
     @Override
-    public AJoinPoint[] getChildrenArrayImpl() {
-        return this.aExpression.getChildrenArrayImpl();
+    public AJoinPoint getFileImpl() {
+        return this.aExpression.getFileImpl();
+    }
+
+    /**
+     * Get value on attribute joinPointName
+     * @return the attribute's value
+     */
+    @Override
+    public String getJoinPointNameImpl() {
+        return this.aExpression.getJoinPointNameImpl();
+    }
+
+    /**
+     * Get value on attribute line
+     * @return the attribute's value
+     */
+    @Override
+    public Integer getLineImpl() {
+        return this.aExpression.getLineImpl();
+    }
+
+    /**
+     * Get value on attribute parent
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint getParentImpl() {
+        return this.aExpression.getParentImpl();
     }
 
     /**
@@ -218,6 +200,24 @@ public abstract class AMemberExpression extends AExpression {
     @Override
     public AJoinPoint getRootImpl() {
         return this.aExpression.getRootImpl();
+    }
+
+    /**
+     * Get value on attribute type
+     * @return the attribute's value
+     */
+    @Override
+    public String getTypeImpl() {
+        return this.aExpression.getTypeImpl();
+    }
+
+    /**
+     * Get value on attribute uuid
+     * @return the attribute's value
+     */
+    @Override
+    public String getUuidImpl() {
+        return this.aExpression.getUuidImpl();
     }
 
     /**
@@ -327,20 +327,20 @@ public abstract class AMemberExpression extends AExpression {
         COMPUTED("computed"),
         OBJECT("object"),
         PROPERTY("property"),
-        PARENT("parent"),
-        JOINPOINTNAME("joinPointName"),
-        AST("ast"),
-        CODE("code"),
-        LINE("line"),
         ANCESTOR("ancestor"),
-        COLUMN("column"),
-        TYPE("type"),
-        DESCENDANTS("descendants"),
-        UUID("uuid"),
-        FILE("file"),
-        FIELD("field"),
+        AST("ast"),
         CHILDREN("children"),
-        ROOT("root");
+        CODE("code"),
+        COLUMN("column"),
+        DESCENDANTS("descendants"),
+        FIELD("field"),
+        FILE("file"),
+        JOINPOINTNAME("joinPointName"),
+        LINE("line"),
+        PARENT("parent"),
+        ROOT("root"),
+        TYPE("type"),
+        UUID("uuid");
         private String name;
 
         /**

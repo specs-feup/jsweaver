@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 /**
  * Abstract Weaver Implementation for JackdawWeaver<br>
-Since the generated abstract classes are always overwritten, their implementation should be done by extending those abstract classes with user-defined classes.<br>
-The abstract class {@link pt.up.fe.specs.jackdaw.abstracts.AJackdawWeaverJoinPoint} can be used to add user-defined methods and fields which the user intends to add for all join points and are not intended to be used in LARA aspects.
+ * Since the generated abstract classes are always overwritten, their implementation should be done by extending those abstract classes with user-defined classes.<br>
+ * The abstract class {@link pt.up.fe.specs.jackdaw.abstracts.AJackdawWeaverJoinPoint} contains attributes and actions common to all join points.
  * The implementation of the abstract methods is mandatory!
  * @author Lara C.
  */
@@ -22,7 +22,7 @@ public abstract class AJackdawWeaver extends LaraWeaverEngine {
      */
     @Override
     public final List<String> getActions() {
-        String[] weaverActions= {"setName", "refactor", "refactor", "refactorParam"};
+        String[] weaverActions= {"refactor", "refactor", "refactorParam", "setName"};
         return Arrays.asList(weaverActions);
     }
 

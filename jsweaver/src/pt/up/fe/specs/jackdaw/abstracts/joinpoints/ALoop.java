@@ -19,29 +19,6 @@ import java.util.Arrays;
 public abstract class ALoop extends AJackdawWeaverJoinPoint {
 
     /**
-     * The kind of the loop
-     */
-    public abstract String getKindImpl();
-
-    /**
-     * The kind of the loop
-     */
-    public final Object getKind() {
-        try {
-        	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "kind", Optional.empty());
-        	}
-        	String result = this.getKindImpl();
-        	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.END, this, "kind", Optional.ofNullable(result));
-        	}
-        	return result!=null?result:getUndefinedValue();
-        } catch(Exception e) {
-        	throw new AttributeException(get_class(), "kind", e);
-        }
-    }
-
-    /**
      * If the loop is innermost.
      */
     public abstract Boolean getIsInnermostImpl();
@@ -61,6 +38,29 @@ public abstract class ALoop extends AJackdawWeaverJoinPoint {
         	return result!=null?result:getUndefinedValue();
         } catch(Exception e) {
         	throw new AttributeException(get_class(), "isInnermost", e);
+        }
+    }
+
+    /**
+     * The kind of the loop
+     */
+    public abstract String getKindImpl();
+
+    /**
+     * The kind of the loop
+     */
+    public final Object getKind() {
+        try {
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "kind", Optional.empty());
+        	}
+        	String result = this.getKindImpl();
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.END, this, "kind", Optional.ofNullable(result));
+        	}
+        	return result!=null?result:getUndefinedValue();
+        } catch(Exception e) {
+        	throw new AttributeException(get_class(), "kind", e);
         }
     }
 
@@ -117,8 +117,8 @@ public abstract class ALoop extends AJackdawWeaverJoinPoint {
     @Override
     protected void fillWithAttributes(List<String> attributes) {
         super.fillWithAttributes(attributes);
-        attributes.add("kind");
         attributes.add("isInnermost");
+        attributes.add("kind");
         attributes.add("nestedLevel");
     }
 
@@ -150,23 +150,23 @@ public abstract class ALoop extends AJackdawWeaverJoinPoint {
      * 
      */
     protected enum LoopAttributes {
-        KIND("kind"),
         ISINNERMOST("isInnermost"),
+        KIND("kind"),
         NESTEDLEVEL("nestedLevel"),
-        PARENT("parent"),
-        JOINPOINTNAME("joinPointName"),
-        AST("ast"),
-        CODE("code"),
-        LINE("line"),
         ANCESTOR("ancestor"),
-        COLUMN("column"),
-        TYPE("type"),
-        DESCENDANTS("descendants"),
-        UUID("uuid"),
-        FILE("file"),
-        FIELD("field"),
+        AST("ast"),
         CHILDREN("children"),
-        ROOT("root");
+        CODE("code"),
+        COLUMN("column"),
+        DESCENDANTS("descendants"),
+        FIELD("field"),
+        FILE("file"),
+        JOINPOINTNAME("joinPointName"),
+        LINE("line"),
+        PARENT("parent"),
+        ROOT("root"),
+        TYPE("type"),
+        UUID("uuid");
         private String name;
 
         /**

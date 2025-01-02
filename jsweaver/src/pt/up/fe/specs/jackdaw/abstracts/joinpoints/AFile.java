@@ -20,29 +20,6 @@ import java.util.Arrays;
 public abstract class AFile extends AJackdawWeaverJoinPoint {
 
     /**
-     * Absolute path of the program file.
-     */
-    public abstract String getPathImpl();
-
-    /**
-     * Absolute path of the program file.
-     */
-    public final Object getPath() {
-        try {
-        	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "path", Optional.empty());
-        	}
-        	String result = this.getPathImpl();
-        	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.END, this, "path", Optional.ofNullable(result));
-        	}
-        	return result!=null?result:getUndefinedValue();
-        } catch(Exception e) {
-        	throw new AttributeException(get_class(), "path", e);
-        }
-    }
-
-    /**
      * Name of the file.
      */
     public abstract String getNameImpl();
@@ -62,6 +39,29 @@ public abstract class AFile extends AJackdawWeaverJoinPoint {
         	return result!=null?result:getUndefinedValue();
         } catch(Exception e) {
         	throw new AttributeException(get_class(), "name", e);
+        }
+    }
+
+    /**
+     * Absolute path of the program file.
+     */
+    public abstract String getPathImpl();
+
+    /**
+     * Absolute path of the program file.
+     */
+    public final Object getPath() {
+        try {
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "path", Optional.empty());
+        	}
+        	String result = this.getPathImpl();
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.END, this, "path", Optional.ofNullable(result));
+        	}
+        	return result!=null?result:getUndefinedValue();
+        } catch(Exception e) {
+        	throw new AttributeException(get_class(), "path", e);
         }
     }
 
@@ -106,8 +106,8 @@ public abstract class AFile extends AJackdawWeaverJoinPoint {
     @Override
     protected final void fillWithAttributes(List<String> attributes) {
         super.fillWithAttributes(attributes);
-        attributes.add("path");
         attributes.add("name");
+        attributes.add("path");
     }
 
     /**
@@ -139,22 +139,22 @@ public abstract class AFile extends AJackdawWeaverJoinPoint {
      * 
      */
     protected enum FileAttributes {
-        PATH("path"),
         NAME("name"),
-        PARENT("parent"),
-        JOINPOINTNAME("joinPointName"),
-        AST("ast"),
-        CODE("code"),
-        LINE("line"),
+        PATH("path"),
         ANCESTOR("ancestor"),
-        COLUMN("column"),
-        TYPE("type"),
-        DESCENDANTS("descendants"),
-        UUID("uuid"),
-        FILE("file"),
-        FIELD("field"),
+        AST("ast"),
         CHILDREN("children"),
-        ROOT("root");
+        CODE("code"),
+        COLUMN("column"),
+        DESCENDANTS("descendants"),
+        FIELD("field"),
+        FILE("file"),
+        JOINPOINTNAME("joinPointName"),
+        LINE("line"),
+        PARENT("parent"),
+        ROOT("root"),
+        TYPE("type"),
+        UUID("uuid");
         private String name;
 
         /**
