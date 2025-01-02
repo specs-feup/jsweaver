@@ -39,6 +39,7 @@ dependencies {
 	implementation ':WeaverInterface'
 
 	implementation ':jsAst'
+	implementation ':jsweaverTasks'
 
 	implementation group: 'com.google.code.gson', name: 'gson', version: '2.4'		
 	implementation group: 'com.sun.xml.bind', name: 'jaxb-core', version: '2.3.0.1'		
