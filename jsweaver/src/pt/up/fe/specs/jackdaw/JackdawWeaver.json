@@ -2773,7 +2773,6 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "",
 						"children": [
 									{
 										"type": "boolean",
@@ -2782,7 +2781,6 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "",
 						"children": [
 									{
 										"type": "boolean",
@@ -3007,7 +3005,6 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "",
 						"children": [
 									{
 										"type": "boolean",
@@ -3016,7 +3013,6 @@
 					},
 					{
 						"type": "attribute",
-						"tooltip": "",
 						"children": [
 									{
 										"type": "boolean",

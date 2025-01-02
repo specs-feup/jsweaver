@@ -21,6 +21,79 @@ import java.util.Arrays;
 public abstract class AFunctionDeclaration extends AJackdawWeaverJoinPoint {
 
     /**
+     * If the function is async.
+     */
+    public abstract Boolean getAsyncImpl();
+
+    /**
+     * If the function is async.
+     */
+    public final Object getAsync() {
+        try {
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "async", Optional.empty());
+        	}
+        	Boolean result = this.getAsyncImpl();
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.END, this, "async", Optional.ofNullable(result));
+        	}
+        	return result!=null?result:getUndefinedValue();
+        } catch(Exception e) {
+        	throw new AttributeException(get_class(), "async", e);
+        }
+    }
+
+    /**
+     * Get value on attribute expression
+     * @return the attribute's value
+     */
+    public abstract Boolean getExpressionImpl();
+
+    /**
+     * Get value on attribute expression
+     * @return the attribute's value
+     */
+    public final Object getExpression() {
+        try {
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "expression", Optional.empty());
+        	}
+        	Boolean result = this.getExpressionImpl();
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.END, this, "expression", Optional.ofNullable(result));
+        	}
+        	return result!=null?result:getUndefinedValue();
+        } catch(Exception e) {
+        	throw new AttributeException(get_class(), "expression", e);
+        }
+    }
+
+    /**
+     * Get value on attribute generator
+     * @return the attribute's value
+     */
+    public abstract Boolean getGeneratorImpl();
+
+    /**
+     * Get value on attribute generator
+     * @return the attribute's value
+     */
+    public final Object getGenerator() {
+        try {
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "generator", Optional.empty());
+        	}
+        	Boolean result = this.getGeneratorImpl();
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.END, this, "generator", Optional.ofNullable(result));
+        	}
+        	return result!=null?result:getUndefinedValue();
+        } catch(Exception e) {
+        	throw new AttributeException(get_class(), "generator", e);
+        }
+    }
+
+    /**
      * Identifier of this function.
      */
     public abstract AJoinPoint getIdImpl();
@@ -96,75 +169,6 @@ public abstract class AFunctionDeclaration extends AJackdawWeaverJoinPoint {
         	return result!=null?result:getUndefinedValue();
         } catch(Exception e) {
         	throw new AttributeException(get_class(), "params", e);
-        }
-    }
-
-    /**
-     * If the function is async.
-     */
-    public abstract Boolean getAsyncImpl();
-
-    /**
-     * If the function is async.
-     */
-    public final Object getAsync() {
-        try {
-        	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "async", Optional.empty());
-        	}
-        	Boolean result = this.getAsyncImpl();
-        	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.END, this, "async", Optional.ofNullable(result));
-        	}
-        	return result!=null?result:getUndefinedValue();
-        } catch(Exception e) {
-        	throw new AttributeException(get_class(), "async", e);
-        }
-    }
-
-    /**
-     * 
-     */
-    public abstract Boolean getGeneratorImpl();
-
-    /**
-     * 
-     */
-    public final Object getGenerator() {
-        try {
-        	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "generator", Optional.empty());
-        	}
-        	Boolean result = this.getGeneratorImpl();
-        	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.END, this, "generator", Optional.ofNullable(result));
-        	}
-        	return result!=null?result:getUndefinedValue();
-        } catch(Exception e) {
-        	throw new AttributeException(get_class(), "generator", e);
-        }
-    }
-
-    /**
-     * 
-     */
-    public abstract Boolean getExpressionImpl();
-
-    /**
-     * 
-     */
-    public final Object getExpression() {
-        try {
-        	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "expression", Optional.empty());
-        	}
-        	Boolean result = this.getExpressionImpl();
-        	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.END, this, "expression", Optional.ofNullable(result));
-        	}
-        	return result!=null?result:getUndefinedValue();
-        } catch(Exception e) {
-        	throw new AttributeException(get_class(), "expression", e);
         }
     }
 
@@ -263,12 +267,12 @@ public abstract class AFunctionDeclaration extends AJackdawWeaverJoinPoint {
     @Override
     protected final void fillWithAttributes(List<String> attributes) {
         super.fillWithAttributes(attributes);
+        attributes.add("async");
+        attributes.add("expression");
+        attributes.add("generator");
         attributes.add("id");
         attributes.add("name");
         attributes.add("params");
-        attributes.add("async");
-        attributes.add("generator");
-        attributes.add("expression");
     }
 
     /**
@@ -286,8 +290,8 @@ public abstract class AFunctionDeclaration extends AJackdawWeaverJoinPoint {
     @Override
     protected final void fillWithActions(List<String> actions) {
         super.fillWithActions(actions);
-        actions.add("void refactor(string)");
-        actions.add("void refactorParam(int, string)");
+        actions.add("void refactor(String)");
+        actions.add("void refactorParam(int, String)");
     }
 
     /**
@@ -302,26 +306,26 @@ public abstract class AFunctionDeclaration extends AJackdawWeaverJoinPoint {
      * 
      */
     protected enum FunctionDeclarationAttributes {
+        ASYNC("async"),
+        EXPRESSION("expression"),
+        GENERATOR("generator"),
         ID("id"),
         NAME("name"),
         PARAMS("params"),
-        ASYNC("async"),
-        GENERATOR("generator"),
-        EXPRESSION("expression"),
-        PARENT("parent"),
-        JOINPOINTNAME("joinPointName"),
-        AST("ast"),
-        CODE("code"),
-        LINE("line"),
         ANCESTOR("ancestor"),
-        COLUMN("column"),
-        TYPE("type"),
-        DESCENDANTS("descendants"),
-        UUID("uuid"),
-        FILE("file"),
-        FIELD("field"),
+        AST("ast"),
         CHILDREN("children"),
-        ROOT("root");
+        CODE("code"),
+        COLUMN("column"),
+        DESCENDANTS("descendants"),
+        FIELD("field"),
+        FILE("file"),
+        JOINPOINTNAME("joinPointName"),
+        LINE("line"),
+        PARENT("parent"),
+        ROOT("root"),
+        TYPE("type"),
+        UUID("uuid");
         private String name;
 
         /**
