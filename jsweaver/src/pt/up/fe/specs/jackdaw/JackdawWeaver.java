@@ -7,7 +7,7 @@ import org.lara.interpreter.weaver.ast.AstMethods;
 import org.lara.interpreter.weaver.interf.AGear;
 import org.lara.interpreter.weaver.interf.JoinPoint;
 import org.lara.interpreter.weaver.options.WeaverOption;
-import org.lara.language.specification.dsl.LanguageSpecificationV2;
+import org.lara.language.specification.dsl.LanguageSpecification;
 import org.suikasoft.jOptions.Interfaces.DataStore;
 import org.suikasoft.jOptions.storedefinition.StoreDefinition;
 import org.suikasoft.jOptions.storedefinition.StoreDefinitionBuilder;
@@ -42,8 +42,8 @@ import java.util.stream.Collectors;
  */
 public class JackdawWeaver extends AJackdawWeaver {
 
-    public static LanguageSpecificationV2 getLanguageSpec() {
-        return LanguageSpecificationV2.newInstance(() -> "jackdaw/specs/joinPointModel.xml",
+    public static LanguageSpecification getLanguageSpec() {
+        return LanguageSpecification.newInstance(() -> "jackdaw/specs/joinPointModel.xml",
                 () -> "jackdaw/specs/artifacts.xml", () -> "jackdaw/specs/actionModel.xml");
     }
 
@@ -213,7 +213,7 @@ public class JackdawWeaver extends AJackdawWeaver {
 
 
     @Override
-    protected LanguageSpecificationV2 buildLangSpecs() {
+    protected LanguageSpecification buildLangSpecs() {
         return getLanguageSpec();
     }
 
