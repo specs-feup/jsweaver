@@ -13,3 +13,4 @@ includeBuild("../../lara-framework/LaraUtils")
 includeBuild("../../lara-framework/WeaverInterface")
 
 includeBuild("../../jsweaver/jsAst")
+includeBuild("../../jsweaver/jsweaverTasks")
