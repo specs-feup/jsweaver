@@ -9,3 +9,5 @@
 !**/run/*.launch
 !**/run/*.deploy
 **/run/*-local.launch
+
+**/node_modules/*
