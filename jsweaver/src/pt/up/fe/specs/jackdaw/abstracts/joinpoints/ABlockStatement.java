@@ -51,21 +51,12 @@ public abstract class ABlockStatement extends AStatement {
     }
 
     /**
-     * Get value on attribute parent
+     * Get value on attribute ancestor
      * @return the attribute's value
      */
     @Override
-    public AJoinPoint getParentImpl() {
-        return this.aStatement.getParentImpl();
-    }
-
-    /**
-     * Get value on attribute joinPointName
-     * @return the attribute's value
-     */
-    @Override
-    public String getJoinPointNameImpl() {
-        return this.aStatement.getJoinPointNameImpl();
+    public AJoinPoint ancestorImpl(String joinPointType) {
+        return this.aStatement.ancestorImpl(joinPointType);
     }
 
     /**
@@ -78,30 +69,21 @@ public abstract class ABlockStatement extends AStatement {
     }
 
     /**
+     * Get value on attribute childrenArrayImpl
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint[] getChildrenArrayImpl() {
+        return this.aStatement.getChildrenArrayImpl();
+    }
+
+    /**
      * Get value on attribute code
      * @return the attribute's value
      */
     @Override
     public String getCodeImpl() {
         return this.aStatement.getCodeImpl();
-    }
-
-    /**
-     * Get value on attribute line
-     * @return the attribute's value
-     */
-    @Override
-    public Integer getLineImpl() {
-        return this.aStatement.getLineImpl();
-    }
-
-    /**
-     * Get value on attribute ancestor
-     * @return the attribute's value
-     */
-    @Override
-    public AJoinPoint ancestorImpl(String joinPointType) {
-        return this.aStatement.ancestorImpl(joinPointType);
     }
 
     /**
@@ -114,39 +96,12 @@ public abstract class ABlockStatement extends AStatement {
     }
 
     /**
-     * Get value on attribute type
-     * @return the attribute's value
-     */
-    @Override
-    public String getTypeImpl() {
-        return this.aStatement.getTypeImpl();
-    }
-
-    /**
      * Get value on attribute descendantsArrayImpl
      * @return the attribute's value
      */
     @Override
     public AJoinPoint[] getDescendantsArrayImpl() {
         return this.aStatement.getDescendantsArrayImpl();
-    }
-
-    /**
-     * Get value on attribute uuid
-     * @return the attribute's value
-     */
-    @Override
-    public String getUuidImpl() {
-        return this.aStatement.getUuidImpl();
-    }
-
-    /**
-     * Get value on attribute file
-     * @return the attribute's value
-     */
-    @Override
-    public AJoinPoint getFileImpl() {
-        return this.aStatement.getFileImpl();
     }
 
     /**
@@ -159,12 +114,39 @@ public abstract class ABlockStatement extends AStatement {
     }
 
     /**
-     * Get value on attribute childrenArrayImpl
+     * Get value on attribute file
      * @return the attribute's value
      */
     @Override
-    public AJoinPoint[] getChildrenArrayImpl() {
-        return this.aStatement.getChildrenArrayImpl();
+    public AJoinPoint getFileImpl() {
+        return this.aStatement.getFileImpl();
+    }
+
+    /**
+     * Get value on attribute joinPointName
+     * @return the attribute's value
+     */
+    @Override
+    public String getJoinPointNameImpl() {
+        return this.aStatement.getJoinPointNameImpl();
+    }
+
+    /**
+     * Get value on attribute line
+     * @return the attribute's value
+     */
+    @Override
+    public Integer getLineImpl() {
+        return this.aStatement.getLineImpl();
+    }
+
+    /**
+     * Get value on attribute parent
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint getParentImpl() {
+        return this.aStatement.getParentImpl();
     }
 
     /**
@@ -174,6 +156,24 @@ public abstract class ABlockStatement extends AStatement {
     @Override
     public AJoinPoint getRootImpl() {
         return this.aStatement.getRootImpl();
+    }
+
+    /**
+     * Get value on attribute type
+     * @return the attribute's value
+     */
+    @Override
+    public String getTypeImpl() {
+        return this.aStatement.getTypeImpl();
+    }
+
+    /**
+     * Get value on attribute uuid
+     * @return the attribute's value
+     */
+    @Override
+    public String getUuidImpl() {
+        return this.aStatement.getUuidImpl();
     }
 
     /**
@@ -287,20 +287,20 @@ public abstract class ABlockStatement extends AStatement {
      * 
      */
     protected enum BlockStatementAttributes {
-        PARENT("parent"),
-        JOINPOINTNAME("joinPointName"),
-        AST("ast"),
-        CODE("code"),
-        LINE("line"),
         ANCESTOR("ancestor"),
-        COLUMN("column"),
-        TYPE("type"),
-        DESCENDANTS("descendants"),
-        UUID("uuid"),
-        FILE("file"),
-        FIELD("field"),
+        AST("ast"),
         CHILDREN("children"),
-        ROOT("root");
+        CODE("code"),
+        COLUMN("column"),
+        DESCENDANTS("descendants"),
+        FIELD("field"),
+        FILE("file"),
+        JOINPOINTNAME("joinPointName"),
+        LINE("line"),
+        PARENT("parent"),
+        ROOT("root"),
+        TYPE("type"),
+        UUID("uuid");
         private String name;
 
         /**

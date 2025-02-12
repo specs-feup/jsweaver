@@ -103,20 +103,20 @@ public abstract class ALiteral extends AJackdawWeaverJoinPoint {
      */
     protected enum LiteralAttributes {
         RAW("raw"),
-        PARENT("parent"),
-        JOINPOINTNAME("joinPointName"),
-        AST("ast"),
-        CODE("code"),
-        LINE("line"),
         ANCESTOR("ancestor"),
-        COLUMN("column"),
-        TYPE("type"),
-        DESCENDANTS("descendants"),
-        UUID("uuid"),
-        FILE("file"),
-        FIELD("field"),
+        AST("ast"),
         CHILDREN("children"),
-        ROOT("root");
+        CODE("code"),
+        COLUMN("column"),
+        DESCENDANTS("descendants"),
+        FIELD("field"),
+        FILE("file"),
+        JOINPOINTNAME("joinPointName"),
+        LINE("line"),
+        PARENT("parent"),
+        ROOT("root"),
+        TYPE("type"),
+        UUID("uuid");
         private String name;
 
         /**

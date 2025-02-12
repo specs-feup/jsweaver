@@ -20,29 +20,6 @@ import java.util.Arrays;
 public abstract class AMethodDefinition extends AJackdawWeaverJoinPoint {
 
     /**
-     * Key of this method.
-     */
-    public abstract AJoinPoint getKeyImpl();
-
-    /**
-     * Key of this method.
-     */
-    public final Object getKey() {
-        try {
-        	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "key", Optional.empty());
-        	}
-        	AJoinPoint result = this.getKeyImpl();
-        	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.END, this, "key", Optional.ofNullable(result));
-        	}
-        	return result!=null?result:getUndefinedValue();
-        } catch(Exception e) {
-        	throw new AttributeException(get_class(), "key", e);
-        }
-    }
-
-    /**
      * If the method is computed.
      */
     public abstract Boolean getComputedImpl();
@@ -66,25 +43,25 @@ public abstract class AMethodDefinition extends AJackdawWeaverJoinPoint {
     }
 
     /**
-     * If the method is static.
+     * Key of this method.
      */
-    public abstract Boolean getStaticImpl();
+    public abstract AJoinPoint getKeyImpl();
 
     /**
-     * If the method is static.
+     * Key of this method.
      */
-    public final Object getStatic() {
+    public final Object getKey() {
         try {
         	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "static", Optional.empty());
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "key", Optional.empty());
         	}
-        	Boolean result = this.getStaticImpl();
+        	AJoinPoint result = this.getKeyImpl();
         	if(hasListeners()) {
-        		eventTrigger().triggerAttribute(Stage.END, this, "static", Optional.ofNullable(result));
+        		eventTrigger().triggerAttribute(Stage.END, this, "key", Optional.ofNullable(result));
         	}
         	return result!=null?result:getUndefinedValue();
         } catch(Exception e) {
-        	throw new AttributeException(get_class(), "static", e);
+        	throw new AttributeException(get_class(), "key", e);
         }
     }
 
@@ -108,6 +85,29 @@ public abstract class AMethodDefinition extends AJackdawWeaverJoinPoint {
         	return result!=null?result:getUndefinedValue();
         } catch(Exception e) {
         	throw new AttributeException(get_class(), "kind", e);
+        }
+    }
+
+    /**
+     * If the method is static.
+     */
+    public abstract Boolean getStaticImpl();
+
+    /**
+     * If the method is static.
+     */
+    public final Object getStatic() {
+        try {
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.BEGIN, this, "static", Optional.empty());
+        	}
+        	Boolean result = this.getStaticImpl();
+        	if(hasListeners()) {
+        		eventTrigger().triggerAttribute(Stage.END, this, "static", Optional.ofNullable(result));
+        	}
+        	return result!=null?result:getUndefinedValue();
+        } catch(Exception e) {
+        	throw new AttributeException(get_class(), "static", e);
         }
     }
 
@@ -152,10 +152,10 @@ public abstract class AMethodDefinition extends AJackdawWeaverJoinPoint {
     @Override
     protected final void fillWithAttributes(List<String> attributes) {
         super.fillWithAttributes(attributes);
-        attributes.add("key");
         attributes.add("computed");
-        attributes.add("static");
+        attributes.add("key");
         attributes.add("kind");
+        attributes.add("static");
     }
 
     /**
@@ -187,24 +187,24 @@ public abstract class AMethodDefinition extends AJackdawWeaverJoinPoint {
      * 
      */
     protected enum MethodDefinitionAttributes {
-        KEY("key"),
         COMPUTED("computed"),
-        STATIC("static"),
+        KEY("key"),
         KIND("kind"),
-        PARENT("parent"),
-        JOINPOINTNAME("joinPointName"),
-        AST("ast"),
-        CODE("code"),
-        LINE("line"),
+        STATIC("static"),
         ANCESTOR("ancestor"),
-        COLUMN("column"),
-        TYPE("type"),
-        DESCENDANTS("descendants"),
-        UUID("uuid"),
-        FILE("file"),
-        FIELD("field"),
+        AST("ast"),
         CHILDREN("children"),
-        ROOT("root");
+        CODE("code"),
+        COLUMN("column"),
+        DESCENDANTS("descendants"),
+        FIELD("field"),
+        FILE("file"),
+        JOINPOINTNAME("joinPointName"),
+        LINE("line"),
+        PARENT("parent"),
+        ROOT("root"),
+        TYPE("type"),
+        UUID("uuid");
         private String name;
 
         /**

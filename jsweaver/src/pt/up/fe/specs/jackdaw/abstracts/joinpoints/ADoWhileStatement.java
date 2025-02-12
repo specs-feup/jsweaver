@@ -58,21 +58,21 @@ public abstract class ADoWhileStatement extends ALoop {
     }
 
     /**
-     * Get value on attribute kind
-     * @return the attribute's value
-     */
-    @Override
-    public String getKindImpl() {
-        return this.aLoop.getKindImpl();
-    }
-
-    /**
      * Get value on attribute isInnermost
      * @return the attribute's value
      */
     @Override
     public Boolean getIsInnermostImpl() {
         return this.aLoop.getIsInnermostImpl();
+    }
+
+    /**
+     * Get value on attribute kind
+     * @return the attribute's value
+     */
+    @Override
+    public String getKindImpl() {
+        return this.aLoop.getKindImpl();
     }
 
     /**
@@ -85,21 +85,12 @@ public abstract class ADoWhileStatement extends ALoop {
     }
 
     /**
-     * Get value on attribute parent
+     * Get value on attribute ancestor
      * @return the attribute's value
      */
     @Override
-    public AJoinPoint getParentImpl() {
-        return this.aLoop.getParentImpl();
-    }
-
-    /**
-     * Get value on attribute joinPointName
-     * @return the attribute's value
-     */
-    @Override
-    public String getJoinPointNameImpl() {
-        return this.aLoop.getJoinPointNameImpl();
+    public AJoinPoint ancestorImpl(String joinPointType) {
+        return this.aLoop.ancestorImpl(joinPointType);
     }
 
     /**
@@ -112,30 +103,21 @@ public abstract class ADoWhileStatement extends ALoop {
     }
 
     /**
+     * Get value on attribute childrenArrayImpl
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint[] getChildrenArrayImpl() {
+        return this.aLoop.getChildrenArrayImpl();
+    }
+
+    /**
      * Get value on attribute code
      * @return the attribute's value
      */
     @Override
     public String getCodeImpl() {
         return this.aLoop.getCodeImpl();
-    }
-
-    /**
-     * Get value on attribute line
-     * @return the attribute's value
-     */
-    @Override
-    public Integer getLineImpl() {
-        return this.aLoop.getLineImpl();
-    }
-
-    /**
-     * Get value on attribute ancestor
-     * @return the attribute's value
-     */
-    @Override
-    public AJoinPoint ancestorImpl(String joinPointType) {
-        return this.aLoop.ancestorImpl(joinPointType);
     }
 
     /**
@@ -148,39 +130,12 @@ public abstract class ADoWhileStatement extends ALoop {
     }
 
     /**
-     * Get value on attribute type
-     * @return the attribute's value
-     */
-    @Override
-    public String getTypeImpl() {
-        return this.aLoop.getTypeImpl();
-    }
-
-    /**
      * Get value on attribute descendantsArrayImpl
      * @return the attribute's value
      */
     @Override
     public AJoinPoint[] getDescendantsArrayImpl() {
         return this.aLoop.getDescendantsArrayImpl();
-    }
-
-    /**
-     * Get value on attribute uuid
-     * @return the attribute's value
-     */
-    @Override
-    public String getUuidImpl() {
-        return this.aLoop.getUuidImpl();
-    }
-
-    /**
-     * Get value on attribute file
-     * @return the attribute's value
-     */
-    @Override
-    public AJoinPoint getFileImpl() {
-        return this.aLoop.getFileImpl();
     }
 
     /**
@@ -193,12 +148,39 @@ public abstract class ADoWhileStatement extends ALoop {
     }
 
     /**
-     * Get value on attribute childrenArrayImpl
+     * Get value on attribute file
      * @return the attribute's value
      */
     @Override
-    public AJoinPoint[] getChildrenArrayImpl() {
-        return this.aLoop.getChildrenArrayImpl();
+    public AJoinPoint getFileImpl() {
+        return this.aLoop.getFileImpl();
+    }
+
+    /**
+     * Get value on attribute joinPointName
+     * @return the attribute's value
+     */
+    @Override
+    public String getJoinPointNameImpl() {
+        return this.aLoop.getJoinPointNameImpl();
+    }
+
+    /**
+     * Get value on attribute line
+     * @return the attribute's value
+     */
+    @Override
+    public Integer getLineImpl() {
+        return this.aLoop.getLineImpl();
+    }
+
+    /**
+     * Get value on attribute parent
+     * @return the attribute's value
+     */
+    @Override
+    public AJoinPoint getParentImpl() {
+        return this.aLoop.getParentImpl();
     }
 
     /**
@@ -208,6 +190,24 @@ public abstract class ADoWhileStatement extends ALoop {
     @Override
     public AJoinPoint getRootImpl() {
         return this.aLoop.getRootImpl();
+    }
+
+    /**
+     * Get value on attribute type
+     * @return the attribute's value
+     */
+    @Override
+    public String getTypeImpl() {
+        return this.aLoop.getTypeImpl();
+    }
+
+    /**
+     * Get value on attribute uuid
+     * @return the attribute's value
+     */
+    @Override
+    public String getUuidImpl() {
+        return this.aLoop.getUuidImpl();
     }
 
     /**
@@ -317,23 +317,23 @@ public abstract class ADoWhileStatement extends ALoop {
      */
     protected enum DoWhileStatementAttributes {
         TEST("test"),
-        KIND("kind"),
         ISINNERMOST("isInnermost"),
+        KIND("kind"),
         NESTEDLEVEL("nestedLevel"),
-        PARENT("parent"),
-        JOINPOINTNAME("joinPointName"),
-        AST("ast"),
-        CODE("code"),
-        LINE("line"),
         ANCESTOR("ancestor"),
-        COLUMN("column"),
-        TYPE("type"),
-        DESCENDANTS("descendants"),
-        UUID("uuid"),
-        FILE("file"),
-        FIELD("field"),
+        AST("ast"),
         CHILDREN("children"),
-        ROOT("root");
+        CODE("code"),
+        COLUMN("column"),
+        DESCENDANTS("descendants"),
+        FIELD("field"),
+        FILE("file"),
+        JOINPOINTNAME("joinPointName"),
+        LINE("line"),
+        PARENT("parent"),
+        ROOT("root"),
+        TYPE("type"),
+        UUID("uuid");
         private String name;
 
         /**
