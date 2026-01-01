@@ -57,10 +57,6 @@ jobs:
         id: Branch-lara-framework
         run: echo "value=$(git ls-remote --heads https://github.com/specs-feup/lara-framework.git refs/heads/${{ env.BRANCH_NAME }} | wc -l)" >> $GITHUB_OUTPUT
 
-      - name: Check if branch exists on specs-java-libs
-        id: Branch-specs-java-libs
-        run: echo "value=$(git ls-remote --heads https://github.com/specs-feup/specs-java-libs.git refs/heads/${{ env.BRANCH_NAME }} | wc -l)" >> $GITHUB_OUTPUT
-
       - name: Echo checks
         run: |
           echo "Branch-lara-framework: ${{ steps.Branch-lara-framework.outputs.value }}"
@@ -81,6 +77,7 @@ jobs:
         with:
           repository: specs-feup/specs-java-libs
           path: specs-java-libs
+          ref: lara-3.0
           # This is causing problems in PRs, for now it will always be the default branch
           #ref: ${{ steps.Branch-specs-java-libs.outputs.value == '1' && env.BRANCH_NAME || env.DEFAULT_BRANCH }}
 
