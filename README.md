@@ -3,7 +3,7 @@ Javascript source-to-source compiler based on the LARA framework.
 
 **This compiler has been phased out, and will not work with current versions of the LARA framework.**
 
-**If you want to compile it, do it against the following commits of the [LARA](https://github.com/specs-feup/lara-framework/tree/20f95fb9a8baff1c36b01961ed3f261c9c731d48) and [specs-java-libs](https://github.com/specs-feup/specs-java-libs/tree/lara-2.0-legacy) repositories**
+**If you want to compile it, do it against the branch `lara-3.0` of the repositories LARA](https://github.com/specs-feup/lara-framework/tree/lara-3.0) and [specs-java-libs](https://github.com/specs-feup/specs-java-libs/tree/lara-3.0)**
  
 # Resources
 
